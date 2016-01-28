@@ -1,0 +1,206 @@
+[28-Sep-2012 13:50:24] PHP Warning:  file_get_contents(http://ff.ar-brown.net/print/33) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 403 Forbidden
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[28-Sep-2012 13:50:24] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/featuredmatchup.php on line 9
+[03-Oct-2012 10:07:33] PHP Warning:  file_get_contents(http://ff.ar-brown.net/print/33) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[03-Oct-2012 10:07:33] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/featuredmatchup.php on line 9
+[03-Oct-2012 10:52:43] PHP Warning:  file_get_contents(http://ff.ar-brown.net/print/33) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[03-Oct-2012 10:52:43] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/featuredmatchup.php on line 9
+[03-Oct-2012 10:52:58] PHP Warning:  file_get_contents(http://ff.ar-brown.net/print/33) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[03-Oct-2012 10:52:58] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/featuredmatchup.php on line 9
+[03-Oct-2012 11:06:00] PHP Warning:  file_get_contents(http://ff.ar-brown.net/print/33) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[03-Oct-2012 11:06:00] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/featuredmatchup.php on line 9
+[03-Oct-2012 11:10:04] PHP Warning:  file_get_contents(http://ff.ar-brown.net/print/33) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[03-Oct-2012 11:10:04] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/featuredmatchup.php on line 9
+[03-Oct-2012 13:53:21] PHP Warning:  file_get_contents(http://ff.ar-brown.net/print/33) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[03-Oct-2012 13:53:21] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/featuredmatchup.php on line 9
+[03-Oct-2012 18:31:35] PHP Warning:  file_get_contents(http://ff.ar-brown.net/print/33) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[03-Oct-2012 18:31:35] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/featuredmatchup.php on line 9
+[03-Oct-2012 18:44:01] PHP Warning:  file_get_contents(http://ff.ar-brown.net/print/33) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[03-Oct-2012 18:44:01] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/featuredmatchup.php on line 9
+[12-Oct-2012 12:53:50 UTC] PHP Parse error:  syntax error, unexpected '}' in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 80
+[12-Oct-2012 12:55:20 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 12:55:24 UTC] PHP Warning:  require_once(parser/simple_html_dom.php): failed to open stream: No such file or directory in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 22
+[12-Oct-2012 12:55:24 UTC] PHP Fatal error:  require_once(): Failed opening required 'parser/simple_html_dom.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 22
+[12-Oct-2012 12:57:22 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 12:57:25 UTC] PHP Warning:  require_once(parser/simple_html_dom.php): failed to open stream: No such file or directory in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 22
+[12-Oct-2012 12:57:25 UTC] PHP Fatal error:  require_once(): Failed opening required 'parser/simple_html_dom.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 22
+[12-Oct-2012 12:58:09 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 12:58:12 UTC] PHP Warning:  require_once(parser/simple_html_dom.php): failed to open stream: No such file or directory in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 22
+[12-Oct-2012 12:58:12 UTC] PHP Fatal error:  require_once(): Failed opening required 'parser/simple_html_dom.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 22
+[12-Oct-2012 13:00:18 UTC] PHP Fatal error:  Call to undefined function scraping_teams() in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 65
+[12-Oct-2012 13:00:22 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 13:00:25 UTC] PHP Fatal error:  Call to undefined function scraping_teams() in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 65
+[12-Oct-2012 13:00:31 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 13:02:02 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 13:02:11 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:11:21 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:11:29 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:11:45 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:12:07 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:12:41 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:12:43 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:12:45 UTC] PHP Fatal error:  Call to undefined function scraping_teams() in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 65
+[12-Oct-2012 14:13:08 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:13:10 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:13:10 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 41
+[12-Oct-2012 14:13:55 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:13:57 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:13:57 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 41
+[12-Oct-2012 14:14:14 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:14:55 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:15:30 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:15:32 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:29:02 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:29:04 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:29:04 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 41
+[12-Oct-2012 14:45:46 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:45:49 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:45:49 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 41
+[12-Oct-2012 14:46:27 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:46:30 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:46:30 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 41
+[12-Oct-2012 14:46:46 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:46:48 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:46:48 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 41
+[12-Oct-2012 14:47:38 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:47:41 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:47:41 UTC] PHP Fatal error:  Call to a member function clear() on a non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 52
+[12-Oct-2012 14:48:04 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:48:09 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:48:11 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:48:11 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 41
+[12-Oct-2012 14:48:40 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:48:42 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:48:42 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 41
+[12-Oct-2012 14:49:43 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:49:46 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:50:13 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:50:16 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:50:16 UTC] PHP Notice:  Undefined variable: ret in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 55
+[12-Oct-2012 14:50:31 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:50:33 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:50:33 UTC] PHP Fatal error:  Call to a member function clear() on a non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 52
+[12-Oct-2012 14:50:57 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:51:00 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:51:00 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 41
+[12-Oct-2012 14:51:17 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:51:20 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:51:20 UTC] PHP Notice:  Undefined variable: ret in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 55
+[12-Oct-2012 14:51:34 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:51:37 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:51:37 UTC] PHP Notice:  Undefined variable: ret in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 55
+[12-Oct-2012 14:51:55 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:51:57 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:51:57 UTC] PHP Fatal error:  Call to a member function clear() on a non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 52
+[12-Oct-2012 14:52:22 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:52:24 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:52:24 UTC] PHP Notice:  Undefined variable: ret in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 55
+[12-Oct-2012 14:52:40 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:52:42 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:52:42 UTC] PHP Notice:  Undefined variable: ret in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 55
+[12-Oct-2012 14:53:00 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:53:03 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:53:03 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 41
+[12-Oct-2012 14:53:52 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:53:54 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:53:54 UTC] PHP Notice:  Undefined variable: ret in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 56
+[12-Oct-2012 14:54:24 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:54:26 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:54:26 UTC] PHP Notice:  Undefined variable: ret in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 56
+[12-Oct-2012 14:55:35 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:55:38 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:55:38 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 41
+[12-Oct-2012 14:57:20 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:57:22 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:57:22 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 41
+[12-Oct-2012 14:58:43 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 14:58:45 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 14:58:45 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 41
+[12-Oct-2012 15:00:11 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 15:00:13 UTC] PHP Warning:  file_get_contents(http://games.espn.go.com/fflrecentactivity?leagueId=198429&amp;activityType=2&amp;startDate=20120716&amp;endDate=20121011&amp;teamId=-1&amp;tranType=4): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 70
+[12-Oct-2012 15:01:08 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 15:01:11 UTC] PHP Notice:  Undefined variable: ret in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 60
+[12-Oct-2012 15:01:26 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 15:01:27 UTC] PHP Notice:  Undefined variable: ret in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 60
+[12-Oct-2012 15:01:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 74
+[12-Oct-2012 15:02:45 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 15:02:48 UTC] PHP Notice:  Undefined variable: ret in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 60
+[12-Oct-2012 15:02:48 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 74
+[12-Oct-2012 15:03:54 UTC] PHP Notice:  Undefined variable: ret in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 60
+[12-Oct-2012 15:03:54 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 74
+[12-Oct-2012 15:03:58 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 15:04:00 UTC] PHP Notice:  Undefined variable: ret in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 60
+[12-Oct-2012 15:04:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 74
+[12-Oct-2012 15:04:37 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 15:04:40 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 45
+[12-Oct-2012 15:08:21 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 15:08:23 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 45
+[12-Oct-2012 15:08:23 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 79
+[12-Oct-2012 15:09:05 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 15:09:07 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 45
+[12-Oct-2012 15:09:07 UTC] PHP Notice:  Undefined offset: 1 in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 79
+[12-Oct-2012 15:09:34 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 15:09:36 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 45
+[12-Oct-2012 15:09:36 UTC] PHP Notice:  Undefined offset: 1 in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 79
+[12-Oct-2012 15:10:37 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 15:10:39 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 46
+[12-Oct-2012 15:11:25 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 15:11:28 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 46
+[12-Oct-2012 15:15:48 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 15:15:51 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 46
+[12-Oct-2012 15:29:54 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 46
+[12-Oct-2012 15:32:51 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 15:32:53 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 46
+[12-Oct-2012 16:13:20 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 46
+[12-Oct-2012 18:52:22 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[12-Oct-2012 18:52:26 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 46
+[23-Oct-2012 23:07:03 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[23-Oct-2012 23:07:09 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 46
+[29-Oct-2012 21:05:40 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[29-Oct-2012 21:05:46 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 46
+[30-Oct-2012 23:53:14 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[30-Oct-2012 23:53:19 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 46
+[30-Oct-2012 23:53:26 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 46
+[02-Nov-2012 12:03:05 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[02-Nov-2012 12:03:13 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 46
+[02-Nov-2012 12:03:39 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 46
+[02-Nov-2012 12:28:49 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[02-Nov-2012 12:28:53 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 46
+[08-Nov-2012 00:41:57 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[08-Nov-2012 00:42:04 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 46
+[08-Nov-2012 00:48:33 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7
+[09-Nov-2012 19:13:48 UTC] PHP Notice:  Undefined index: submit in /home1/arbrownn/public_html/parser/example/scrapeTrades.php on line 7

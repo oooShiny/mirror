@@ -1,0 +1,92 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 80%;
+    /*overflow: hidden;*/
+}
+
+
+
+/* Weather Styles */
+img.weather {
+    height: 1em;
+    vertical-align: middle;
+}
+.weather-now {
+    padding-left: 1.5em;
+    padding-bottom: 2em;
+}
+#temp {
+    font-size: 300%;
+    line-height: 0.5;
+}
+#info {
+    font-size: 80%;
+}
+
+
+/* Patriots Styles */
+.patriots-info img {
+    height: 0.7em;
+}
+
+
+
+/* Clock Styles */
+#clock {
+    font-size: 300%;
+}
+
+
+
+/* Calendar Styles */
+.calendar-info img {
+    height: 15px;
+}
+.cal_info {
+    padding-top: 0.8em;
+    padding-left: 3.5em;
+    font-size: 0.8em;
+}
+.date {
+    float: left;
+}
+.weekday {
+    font-size: 0.6em;
+    position: relative;
+    top: -17px;
+}
+.day {
+    font-size: 2em;
+}
+
+
+
+
+/* Layout Styles */
+.header div {
+    width: 30%;
+    margin: 0 auto;
+}
+.column {
+    width: 30%;
+}
+.column-left {
+    float: left;
+    padding-left: 2%;
+}
+.column-right {
+    float: right;
+    /*width: 15%;*/
+}
+dl {
+    margin: 0px;
+    margin-bottom: 5em;
+}
+dd {
+    font-size: 75%;
+    margin-left: 30px;
+}
+
+/* MBTA Styles */

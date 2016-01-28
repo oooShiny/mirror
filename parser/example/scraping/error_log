@@ -1,0 +1,59 @@
+[07-Aug-2012 06:36:04] PHP Warning:  Invalid argument supplied for foreach() in /home1/arbrownn/public_html/parser/example/scraping/ScoreScrape.php on line 39
+[07-Aug-2012 06:36:53] PHP Warning:  Invalid argument supplied for foreach() in /home1/arbrownn/public_html/parser/example/scraping/ScoreScrape.php on line 39
+[07-Aug-2012 06:37:58] PHP Warning:  Invalid argument supplied for foreach() in /home1/arbrownn/public_html/parser/example/scraping/ScoreScrape.php on line 39
+[07-Aug-2012 06:38:18] PHP Warning:  Invalid argument supplied for foreach() in /home1/arbrownn/public_html/parser/example/scraping/ScoreScrape.php on line 39
+[07-Oct-2012 18:25:34] PHP Warning:  require_once(parser/simple_html_dom.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 2
+[07-Oct-2012 18:25:34] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'parser/simple_html_dom.php' (include_path='.:/usr/lib64/php:/usr/lib/php:/usr/share/pear') in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 2
+[07-Oct-2012 18:26:57] PHP Warning:  require_once(parser/simple_html_dom.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 2
+[07-Oct-2012 18:26:57] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'parser/simple_html_dom.php' (include_path='.:/usr/lib64/php:/usr/lib/php:/usr/share/pear') in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 2
+[07-Oct-2012 18:35:26] PHP Parse error:  syntax error, unexpected ';' in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 9
+[07-Oct-2012 18:38:51] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 523
+[07-Oct-2012 18:39:41] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 578
+[07-Oct-2012 18:40:28] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 577
+[07-Oct-2012 18:41:16] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 538
+[07-Oct-2012 18:43:05] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 578
+[07-Oct-2012 18:44:23] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home1/arbrownn/public_html/parser/simple_html_dom.php on line 532
+[08-Oct-2012 06:39:44] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 49
+[08-Oct-2012 06:55:14] PHP Parse error:  syntax error, unexpected T_FOREACH, expecting ',' or ';' in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 46
+[08-Oct-2012 06:55:16] PHP Parse error:  syntax error, unexpected T_FOREACH, expecting ',' or ';' in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 46
+[08-Oct-2012 11:51:56] PHP Parse error:  syntax error, unexpected T_LNUMBER, expecting ',' or ';' in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 52
+[08-Nov-2012 00:49:08 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 14
+[09-Nov-2012 01:28:18 UTC] PHP Fatal error:  Call to undefined function db_query() in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 59
+[09-Nov-2012 01:29:42 UTC] PHP Fatal error:  Call to undefined function db_query() in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 57
+[09-Nov-2012 01:30:10 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 16
+[09-Nov-2012 01:30:50 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 16
+[09-Nov-2012 01:31:15 UTC] PHP Fatal error:  Call to undefined function db_query() in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 57
+[09-Nov-2012 01:31:50 UTC] PHP Notice:  Undefined variable: gotTeams in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 57
+[09-Nov-2012 01:31:50 UTC] PHP Warning:  mysql_query(): Access denied for user 'sean'@'localhost' (using password: NO) in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 57
+[09-Nov-2012 01:31:50 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 57
+[09-Nov-2012 01:31:51 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 16
+[09-Nov-2012 01:32:06 UTC] PHP Notice:  Undefined variable: gotTeams in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 57
+[09-Nov-2012 01:32:06 UTC] PHP Warning:  mysql_query(): Access denied for user 'sean'@'localhost' (using password: NO) in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 57
+[09-Nov-2012 01:32:06 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 57
+[09-Nov-2012 01:32:07 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 16
+[09-Nov-2012 01:32:47 UTC] PHP Warning:  mysql_query(): Access denied for user 'sean'@'localhost' (using password: NO) in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 57
+[09-Nov-2012 01:32:47 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 57
+[09-Nov-2012 01:32:47 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 16
+[09-Nov-2012 01:33:30 UTC] PHP Parse error:  syntax error, unexpected '}' in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 71
+[09-Nov-2012 01:33:49 UTC] PHP Warning:  mysql_query(): Access denied for user 'sean'@'localhost' (using password: NO) in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 57
+[09-Nov-2012 01:33:49 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 57
+[09-Nov-2012 01:33:50 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 16
+[09-Nov-2012 01:34:21 UTC] PHP Warning:  mysql_query(): Access denied for user 'sean'@'localhost' (using password: NO) in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 57
+[09-Nov-2012 01:34:21 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 57
+[09-Nov-2012 01:34:22 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 16
+[09-Nov-2012 01:34:55 UTC] PHP Warning:  mysql_query(): Access denied for user 'sean'@'localhost' (using password: NO) in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 57
+[09-Nov-2012 01:34:55 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 57
+[09-Nov-2012 01:34:56 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 16
+[09-Nov-2012 01:37:49 UTC] PHP Warning:  mysql_connect(): Access denied for user 'arbrownn@ar-brow'@'localhost' (using password: YES) in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 48
+[09-Nov-2012 01:37:49 UTC] PHP Warning:  mysql_query(): Access denied for user 'sean'@'localhost' (using password: NO) in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 59
+[09-Nov-2012 01:37:49 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 59
+[09-Nov-2012 01:37:50 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 16
+[09-Nov-2012 01:38:44 UTC] PHP Warning:  mysql_connect(): Unknown MySQL server host 'arbrownn_drp11' (1) in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 48
+[09-Nov-2012 01:38:44 UTC] PHP Warning:  mysql_query() expects parameter 2 to be resource, boolean given in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 59
+[09-Nov-2012 01:38:44 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 16
+[09-Nov-2012 01:39:00 UTC] PHP Warning:  mysql_connect(): Access denied for user 'arbrownn@ar-brow'@'localhost' (using password: YES) in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 48
+[09-Nov-2012 01:39:00 UTC] PHP Warning:  mysql_query() expects parameter 2 to be resource, boolean given in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 59
+[09-Nov-2012 01:39:01 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 16
+[09-Nov-2012 01:39:03 UTC] PHP Warning:  mysql_connect(): Access denied for user 'arbrownn@ar-brow'@'localhost' (using password: YES) in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 48
+[09-Nov-2012 01:39:03 UTC] PHP Warning:  mysql_query() expects parameter 2 to be resource, boolean given in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 59
+[09-Nov-2012 01:39:04 UTC] PHP Notice:  Trying to get property of non-object in /home1/arbrownn/public_html/parser/example/scraping/scrape_teams.php on line 16

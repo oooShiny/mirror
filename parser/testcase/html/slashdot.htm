@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Slashdot: News for nerds, stuff that matters</title>
+
+
+
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="//c.fsdn.com/s/css/application.css?alpha_20140311">
+    <script src="//c.fsdn.com/s/js/libs/modernizr-2.6.2.min.js?alpha_20140311"></script>
+    <script src="//c.fsdn.com/s/js/libs/jquery-1.10.2.min.js?alpha_20140311"></script>
+    <script src="//c.fsdn.com/s/js/plugins/slash-cookies.js?alpha_20140311"></script>
+    <script src="//c.fsdn.com/s/all-minified.js?alpha_20140311"></script>
+    <script>
+	var sd_basedomain    = window.location.hostname.split('.').slice(-2).join('.');
+	var sd_am_on_sandbox = /sb\.sf\.net$/.test(window.location.hostname);
+	var sd_api_key       = sd_am_on_sandbox
+	                     ? '54321'
+	                     : 'lAKljjdbRgUncL3FHmvQMpxQwyHdcrqnuMJLc6cQDx0'
+	                     ;
+	var sd_api_base      = '//' + window.location.hostname + '/api/v1/';
+    </script>
+
+
+
+<script type="text/javascript">
+(function() {
+    if (typeof window.janrain !== 'object') window.janrain = {};
+    if (typeof window.janrain.settings !== 'object') window.janrain.settings = {};
+
+    /* _______________ can edit below this line _______________ */
+
+    janrain.settings.tokenUrl = 'https://beta.slashdot.org/token_callback.pl';
+    janrain.settings.type = 'embed';
+    janrain.settings.appId = 'ggidemlconlmjciiohla';
+    janrain.settings.appUrl = 'https://login.slashdot.org';
+    janrain.settings.providers = ["google","twitter","facebook", "linkedin"];
+    janrain.settings.providersPerPage = '4';
+    janrain.settings.format = 'one column';
+    janrain.settings.actionText = 'Sign in using your account with';
+    janrain.settings.showAttribution = false;
+    janrain.settings.fontColor = '#666666';
+    janrain.settings.fontFamily = 'lucida grande, Helvetica, Verdana, sans-serif';
+    janrain.settings.backgroundColor = '#ffffff';
+    janrain.settings.width = '308';
+    janrain.settings.borderColor = '#C0C0C0';
+    janrain.settings.borderRadius = '5';    janrain.settings.buttonBorderColor = '#CCCCCC';
+    janrain.settings.buttonBorderRadius = '5';
+    janrain.settings.buttonBackgroundStyle = 'gradient';
+    janrain.settings.language = 'en';
+    janrain.settings.linkClass = 'janrainEngage';
+
+    /* _______________ can edit above this line _______________ */
+
+    function isReady() { janrain.ready = true; };
+    if (document.addEventListener) {
+      document.addEventListener("DOMContentLoaded", isReady, false);
+    } else {
+      window.attachEvent('onload', isReady);
+    }
+
+    var e = document.createElement('script');
+    e.type = 'text/javascript';
+    e.id = 'janrainAuthWidget';
+
+    if (document.location.protocol === 'https:') {
+      e.src = 'https://rpxnow.com/js/lib/login.slashdot.org/engage.js';
+    } else {
+      e.src = 'http://widget-cdn.rpxnow.com/js/lib/login.slashdot.org/engage.js';
+    }
+
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(e, s);
+})();
+</script>
+
+<script type="text/javascript">
+(function() {
+    if (typeof window.janrain !== 'object') window.janrain = {};
+    if (typeof window.janrain.settings !== 'object') window.janrain.settings = {};
+    if (typeof window.janrain.settings.share !== 'object') window.janrain.settings.share = {};
+    if (typeof window.janrain.settings.packages !== 'object') janrain.settings.packages = [];
+    janrain.settings.packages.push('share');
+
+    /* _______________ can edit below this line _______________ */
+
+    janrain.settings.share.providers = ["facebook","twitter","linkedin"];
+    janrain.settings.share.providersEmail = [];
+    janrain.settings.share.modes = ["broadcast","contact"];
+    janrain.settings.share.attributionDisplay = false;
+    janrain.settings.share.message = "";
+    janrain.settings.share.title = "";
+    janrain.settings.share.url = "";
+    janrain.settings.share.description = "";
+
+    // Modal Styles
+    janrain.settings.share.modalBackgroundColor = "#000000";
+    janrain.settings.share.modalBorderRadius = "5";
+    janrain.settings.share.modalOpacity = "0.5";
+    janrain.settings.share.modalWidth = "5";
+
+    // Body Styles
+    janrain.settings.share.bodyBackgroundColor = "#009DDC";
+    janrain.settings.share.bodyBackgroundColorOverride = false;
+    janrain.settings.share.bodyColor = "#333333";
+    janrain.settings.share.bodyContentBackgroundColor = "#ffffff";
+    janrain.settings.share.bodyFontFamily = "Helvetica";
+    janrain.settings.share.bodyTabBackgroundColor = "#f8f8f8";
+    janrain.settings.share.bodyTabColor = "#000000";
+
+    // Element Styles
+    janrain.settings.share.elementBackgroundColor = "#f6f6f6";
+    janrain.settings.share.elementBorderColor = "#cccccc";
+    janrain.settings.share.elementBorderRadius = "3";
+    janrain.settings.share.elementButtonBorderRadius = "6";
+    janrain.settings.share.elementButtonBoxShadow = "3";
+    janrain.settings.share.elementColor = "#333333";
+    janrain.settings.share.elementHoverBackgroundColor = "#eeeeee";
+    janrain.settings.share.elementLinkColor = "#009DDC";
+
+    /* _______________ can edit above this line _______________ */
+
+    function isReady() { janrain.ready = true; };
+    if (document.addEventListener) {
+        document.addEventListener("DOMContentLoaded", isReady, false);
+    } else {
+        window.attachEvent('onload', isReady);
+    }
+
+    var e = document.createElement('script');
+    e.type = 'text/javascript';
+    e.id = 'janrainWidgets';
+
+    if (document.location.protocol === 'https:') {
+      e.src = 'https://rpxnow.com/js/lib/login.slashdot.org/widget.js';
+    } else {
+      e.src = 'http://widget-cdn.rpxnow.com/js/lib/login.slashdot.org/widget.js';
+    }
+
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(e, s);
+})();
+
+
+
+$(document).ready(function(){
+    if(janrain) {
+        $(document).on('click', "a.janrain", function () {
+
+            var $anchor = $(this);
+            var provider = $anchor.attr("data-provider");
+            var url = $anchor.attr("data-url");
+            var message = $anchor.attr("data-message");
+            var title = $anchor.attr("data-title");
+
+            janrain.engage.share.reset();
+            janrain.engage.share.showProvider(provider);
+            janrain.engage.share.setTitle(title);
+            janrain.engage.share.setMessage(message);
+            janrain.engage.share.setUrl(url);
+            janrain.engage.share.show();
+            return false;
+         });
+    }
+});
+
+
+</script>
+
+    <meta http-equiv="X-XRDS-Location" content="http://beta.slashdot.org/slashdot.xrds"><link rel="top"       title="News for nerds, stuff that matters" href="//beta.slashdot.org/" >
+<link rel="search"    title="Search Slashdot" href="//beta.slashdot.org/search.pl">
+<link rel="alternate" title="Slashdot RSS" href="http://rss.slashdot.org/Slashdot/slashdot" type="application/rss+xml">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+<div class="branddark sticky">
+    <div class="container brandbar">
+        <div class="row">
+            <a href="//beta.slashdot.org"><span class="beta-badge">Beta</span></a>
+            <!-- <nav class="nav-mobile">
+                <a href="#menu-mobile" class="menu-mobile"><i class="fa fa-align-justify"></i></a>
+                <div id="panel-menu">
+                    <ul>
+                        <li><a href="" class="open-login"><i class="icon-signin"></i>Sign in</a></li>
+                        <li><a href=""><i class="icon-sitemap"></i>Topics</a></li>
+                        <li><a href="//beta.slashdot.org/job_board.pl"><i></i>Tech Jobs</a></li>
+                    </ul>
+                </div>
+            </nav> -->
+            <div class="span4">
+                <h1><a href="//beta.slashdot.org">Slashdot: News for Nerds</a></h1>
+                <nav class="nav-desktop">
+                    <ul class="nav-primary">
+                        <li class="menu-trigger">
+                            <a href="/" id="waypoint_02" class="arrow-down" data-tour-id="tour-topics">Topics</a>
+                            <div class="menu menu-mega">
+                                <div class="menu-content">
+                                    <div class="news-content">
+                                        <h3>FEATURED TOPICS</h3>
+                                        <ul class="news-list">
+                                            <li><a class="tv" href="//tv.slashdot.org">Slash Tv</a></li>
+                                            <li><a class="bi" href="//slashdot.org/topic/bi">Slash Bi</a></li>
+                                            <li><a class="cloud"href="//slashdot.org/topic/cloud">Slash Cloud</a></li>
+                                            <li><a class="data-center"href="//slashdot.org/topic/datacenter">Slash Data Center</a></li>
+                                            <li><a class="careers"href="//slashdot.org/topic/careers/">Slash Careers</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="topics">
+                                        <h3>POPULAR TOPICS</h3>
+                                        <ul class="topic-list">
+                                            <li><a href="//beta.slashdot.org/stories/technology" class="technology">Technology</a></li>
+                                            <li><a href="//beta.slashdot.org/stories/science" class="science">Science</a></li>
+                                            <li><a href="//beta.slashdot.org/stories/cloud" class="cloud">Cloud</a></li>
+                                            <li><a href="//beta.slashdot.org/stories/movies" class="movies">Movies</a></li>
+                                            <li><a href="//beta.slashdot.org/stories/storage" class="data-storage">Data Storage</a></li>
+                                            <li><a href="//beta.slashdot.org/stories/government" class="government">Government</a></li>
+                                            <li><a href="//beta.slashdot.org/stories/games" class="games">Games</a></li>
+                                            <li><a href="//beta.slashdot.org/stories/privacy" class="privacy">Privacy</a></li>
+                                            <li><a href="//beta.slashdot.org/stories/space" class="space">Space</a></li>
+                                            <li><a href="//beta.slashdot.org/stories/court" class="court">Court</a></li>
+                                            <li><a href="//beta.slashdot.org/stories/security" class="security">Security</a></li>
+                                            <li><a href="//beta.slashdot.org/stories/censorship" class="censorship">Censorship</a></li>
+                                            <li><a href="//beta.slashdot.org/stories/open-source" class="open-source">Open Source</a></li>
+                                            <li><a href="//beta.slashdot.org/stories/politics" class="politics">Politics</a></li>
+                                            <li><a href="//beta.slashdot.org/stories/biotech" class="biotech">Biotech</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu-trigger">
+                            <a href="//beta.slashdot.org/job_board.pl">Tech Jobs</a>
+                            <div id="geojobs-nav" class="menu"></div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="span3">
+                <ul class="control-submit">
+                    <li class="menu-triggers" data-toggle="tooltip">
+                        <a href="//beta.slashdot.org/submission" class=" btn btn-vanilla">Submit a Story</a>
+                        <ul class="menu menu-submit">
+                            <li><a href="//beta.slashdot.org/submission">Story</a></li>
+                            <li ><a href="">Video</a></li>
+                            <li><a href="">Poll</a></li>
+                            <li><a href="">Event</a></li>
+                            <li><a href="">Book Review</a></li>
+                            <li><a href="">Ask Slashdot</a></li>
+                            <li><a href="">Journal Entry</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="span3 search">
+                <form id="search" method="get" action="//beta.slashdot.org/index2.pl">
+                    <label for="search">Search Slashdot</label>
+                    <input type="text" name="fhfilter" id="searchquery" placeholder="Search Slashdot">
+                    <button type="text" class="btn fa fa-search">Search</button>
+                </form>
+            </div>
+            <div class="span2">
+                <nav class="nav-access pull-right">
+                    <ul>
+	
+	
+		<li >
+			<a href="//beta.slashdot.org/my/login" class="open-login"  >Login</a>
+			
+		</li>
+	
+		<li >
+			<a href="/"   > or </a>
+			
+		</li>
+	
+		<li >
+			<a href="//beta.slashdot.org/faq/index.shtml#i_use_noscript" class="open-signup "  >Sign Up</a>
+			
+		</li>
+	
+</ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="messaging-nav container">
+    <span class="close-message">&times;</span>
+    <p><i class="fa fa-comments-o"></i> Welcome to the Slashdot Beta site -- <a href="http://beta.slashdot.org/faq/index.shtml#betanews">learn more here.</a> Use the link in the footer or <a href="http://slashdot.org/?nobeta=1">click here</a> to return to the Classic version of Slashdot.</p>
+</div>
+
+<script type="text/javascript">
+(function(){
+    var $message, $close;
+    $message = $( '.messaging-nav' );
+    $close   = $( '.close-message' );
+    if( !$.cookie('hide_sitenotice_1') ) {
+        $message.fadeIn('fast');
+    }
+    function closeMessage() {
+        $message.fadeOut('fast', function() {
+            $.cookie('hide_sitenotice_1', 'true', { path: '/', domain: 'beta.slashdot.org', expires: 14 });
+        });
+    }
+    $close.on( 'click', closeMessage );
+})();
+</script>
+<!-- DoubleClick Random Number -->
+<script type="text/javascript">
+function safe_for_ads() {
+	var path = window.location.pathname;
+	if (path === '/'
+	 || path === ''
+	 || path.match(/^\/stories/)
+	 || path.match(/^\/blog/)
+	) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function yet_another_tpc() {
+	var skin_at_hostname = {
+   "" : "awards",
+   "tech-beta.slashdot.org" : "technology",
+   "slashdot.sourceforge.net" : "sfauth",
+   "amd.vendors-beta.slashdot.org" : "vendoramd",
+   "interviews-beta.slashdot.org" : "interviews",
+   "developers-beta.slashdot.org" : "developers",
+   "features-beta.slashdot.org" : "features",
+   "ask-beta.slashdot.org" : "askslashdot",
+   "games-beta.slashdot.org" : "games",
+   "intel.vendors-beta.slashdot.org" : "vendorintel",
+   "hardware-beta.slashdot.org" : "hardware",
+   "apache-beta.slashdot.org" : "apache",
+   "oracle.vendors-beta.slashdot.org" : "vendororacle",
+   "apple-beta.slashdot.org" : "apple",
+   "bsd-beta.slashdot.org" : "bsd",
+   "search-beta.slashdot.org" : "search",
+   "yro-beta.slashdot.org" : "yro",
+   "vendors-beta.slashdot.org" : "vendors",
+   "science-beta.slashdot.org" : "science",
+   "polls-beta.slashdot.org" : "polls",
+   "politics-beta.slashdot.org" : "politics",
+   "meta-beta.slashdot.org" : "meta",
+   "radio-beta.slashdot.org" : "radio",
+   "news-beta.slashdot.org" : "news",
+   "thinkgeek.shill-beta.slashdot.org" : "thinkgeek",
+   "beta.slashdot.org" : "slashdot",
+   "idle-beta.slashdot.org" : "idle",
+   "mobile-beta.slashdot.org" : "mobile",
+   "cmdrtaco-beta.slashdot.org" : "cmdrtaco",
+   "entertainment-beta.slashdot.org" : "entertainment",
+   "books-beta.slashdot.org" : "bookreview",
+   "it-beta.slashdot.org" : "it",
+   "linux-beta.slashdot.org" : "linux",
+   "backslash-beta.slashdot.org" : "backslash"
+}
+;
+
+	var stories = window.location.pathname.match(/stories\/([^\/#?]+)/);
+	var skin;
+	if (skin_at_hostname) {
+		skin = skin_at_hostname[window.location.hostname];
+	}
+
+	if (stories && stories.length) {
+		return matches[1];
+	} else if (skin) {
+		return skin;
+	} else {
+		return null;
+	}
+}
+
+dfp_ord=Math.random()*10000000000000000;
+dfp_tile = 1;
+dfp_page = safe_for_ads() ? 'index' : 'story';
+dfp_tpc = yet_another_tpc() || 'slashdot';
+</script>
+<!-- End DoubleClick Random Number -->
+
+<script type="text/javascript">
+window.google_analytics_uacct = "UA-44495704-1";
+
+var _gaq = _gaq || [];
+
+
+
+
+
+
+  _gaq.push(['_setAccount', 'UA-44495704-1']);
+  _gaq.push(['_setDomainName', '.slashdot.org']);
+
+	
+		_gaq.push(['_addIgnoredRef', 'slashdot.org']);
+	
+
+
+  _gaq.push(['_setCustomVar', 1, 'User Type',  'Anon', 3]);
+	
+	_gaq.push(['_setCustomVar', 2, 'Page','index2', 3]);
+
+	
+
+
+
+// track beta behavior for user
+var betamatches = document.cookie.match(/betagroup=(-?\d+)/);
+
+if(betamatches && betamatches[1]) {
+  if(betamatches[1] == -1) {
+    _gaq.push(['_setCustomVar', 3, 'Beta-Usage','opt-out', 3]);
+  } else if (betamatches[1] == 1) {
+    _gaq.push(['_setCustomVar', 3, 'Beta-Usage','opt-in', 3]);
+  } else if (betamatches[1] >= 2 && betamatches[1] <= 26) {
+    _gaq.push(['_setCustomVar', 3, 'Beta-Usage','redirected', 3]);
+  } else {
+    _gaq.push(['_setCustomVar', 3, 'Beta-Usage','unredirected', 3]);
+  }
+} else {
+    _gaq.push(['_setCustomVar', 3, 'Beta-Usage','visitor-nogroup', 3]);
+}
+
+
+
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+
+
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+<body class="anon index2 ">
+
+
+    <div class="container leaderboard">
+        <div id="ad-wrapper"><!-- ad position 1 -->
+	<!-- DoubleClick Ad Tag -->
+<div id="fad1">
+		
+			
+	
+	<script type="text/javascript">
+	//<![CDATA[
+
+		var hint   = 'mainpage';
+
+	document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/ostg.slashdot/pg_index_p1_leader;pg=index2;page='+dfp_page+';site=beta;logged_in=0;dcopt=ist;tile='+dfp_tile+';sz=728x90;tpc='+dfp_tpc+';u=;ord='+dfp_ord+'?"><\/script>');
+		dfp_tile++;
+	//]]>
+	</script>
+			
+		
+</div>
+<!-- End DoubleClick Ad Tag --></div>
+    </div><div class="container ts">
+    <div class="nav-wrap split-right pull-left">
+        <!-- Nav River -->
+        <div class="col-river river-left">
+        
+        <div class="toolbar">
+            <div class="group-label">
+                <div id="waypoint_01" class="btn-group btn-group-xs views">
+                    <button type="text" class="btn btn-default" data-view="standard">Pictures</button>
+                    <button type="text" class="btn btn-default" data-view="classic">Text Only</button>
+                    <button type="text" class="btn btn-default" data-view="headline">Headlines</button>
+                </div>
+            </div>
+            <ul class="menu-filter text-left pull-left">
+                <li id="waypoint_03"><a class="active-filter" href="//beta.slashdot.org/allstories" data-tour-id="tour-all-stories" onclick="trackEventGeneric('beta_all_stories_filter', 100, this);return false;">All Stories</a></li>
+                <li><a  href="//beta.slashdot.org/stories" onclick="trackEventGeneric('beta_all_editor_picks_filter', 100, this);return false;">Editor Picks</a></li>
+                <li><a  href="//beta.slashdot.org/recent" onclick="trackEventGeneric('beta_submissions_filter', 100, this);return false;">Submissions</a></li>
+                <li id="waypoint_04"><a href="//beta.slashdot.org/mostdiscussed" data-tour-id="tour-most-discussed" onclick="trackEventGeneric('beta_most_discussed_filter', 100, this);return false;">Most Discussed</a></li>
+            </ul>
+        </div>
+    
+        </div>
+    </div>
+</div>
+<div class="container split-right">
+    <div id="view-standard" class="pull-left">
+        <script>
+            
+            
+            
+            trackEventGeneric('beta_page_load_standard_view'); // 'view-standard'
+        </script>
+        <div class="col-river river-left">
+        
+            <article class="layout-article feature-hero-sm">
+    <div class="featured-wrap">
+        <div class="feature-top">
+            <a href="//news-beta.slashdot.org/story/14/03/16/2039235/uk-government-wants-unsavory-web-content-to-be-removed"><img src="//a.fsdn.com/sd/firehose/057/771/835-1.jpg"></a>
+            <header class="story-header">
+                <a href="//news-beta.slashdot.org/story/14/03/16/2039235/uk-government-wants-unsavory-web-content-to-be-removed"><div class="comment-count">122</div></a>
+                <h1 id="title-57771827"><a href="//news-beta.slashdot.org/story/14/03/16/2039235/uk-government-wants-unsavory-web-content-to-be-removed">UK Government Wants "Unsavory" Web Content To Be Removed</a></h1>
+            </header>
+        </div>
+        <div class="feature-left">
+            <a href="//news-beta.slashdot.org/story/14/03/16/1818202/eric-schmidt-on-why-college-is-still-worth-it"><img src="//a.fsdn.com/sd/firehose/057/769/069-1.jpg"></a>
+            <header class="story-header">
+                <a href="//news-beta.slashdot.org/story/14/03/16/1818202/eric-schmidt-on-why-college-is-still-worth-it"><div class="comment-count">121</div></a>
+                <h1 id="title-57769061"><a href="//news-beta.slashdot.org/story/14/03/16/1818202/eric-schmidt-on-why-college-is-still-worth-it">Eric Schmidt On Why College Is Still Worth It</a></h1>
+            </header>
+        </div>
+        <div class="feature-right">
+            <a href="//news-beta.slashdot.org/story/14/03/16/1418201/us-navy-strategists-have-a-long-history-of-finding-the-lost"><img src="//a.fsdn.com/sd/firehose/057/765/355-1.jpg"></a>
+            <header class="story-header">
+                <a href="//news-beta.slashdot.org/story/14/03/16/1418201/us-navy-strategists-have-a-long-history-of-finding-the-lost"><div class="comment-count">93</div></a>
+                <h1 id="title-57764183"><a href="//news-beta.slashdot.org/story/14/03/16/1418201/us-navy-strategists-have-a-long-history-of-finding-the-lost">US Navy Strategists Have a Long History of Finding the Lost</a></h1>
+            </header>
+        </div>
+    </div>
+</article><article class="layout-article" id="firehose-57774477">
+        <header class="story-header">
+            
+            <h1 id="title-57774477"><a href="//science-beta.slashdot.org/story/14/03/16/232246/planet-mercury-has-shrunk-more-than-thought">Planet Mercury Has Shrunk More Than Thought</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~samzenpus" class="author">samzenpus (UID: 5) </a> posted  1 hour ago  | from the getting-small dept. 
+                    
+
+                    
+                </h4>
+            
+            
+                <a href="//science-beta.slashdot.org/story/14/03/16/232246/planet-mercury-has-shrunk-more-than-thought"><span class="comment-count no-topic">24</span></a>
+            
+        </header>
+        
+        <div class="elips" data-link="//science-beta.slashdot.org/story/14/03/16/232246/planet-mercury-has-shrunk-more-than-thought">
+            <p class="" id="text-57774477">
+                
+                    sciencehabit writes <i>"Measuring just 4880 kilometers across, <a href="http://news.sciencemag.org/space/2014/03/scienceshot-honey-i-shrunk-planet">Mercury is a small world</a>. The planet became slightly smaller as its interior cooled, which caused Mercury to shrink, buckling its surface and creating numerous cliffs and ridges. Now, after studying 5934 of these features, researchers report online today in Nature Geoscience that Mercury's contraction was <a href="http://www.nature.com/ngeo/journal/vaop/ncurrent/full/ngeo2097.html">much greater than previously thought</a>: During the past 4 billion years, the planet's diameter decreased by 7 to 14 kilometers. The greater estimate of shrinkage accords with models that predict how much a rocky planet should contract as its interior cools; the new work may also lend insight into the evolution of extrasolar planets that, like Mercury and unlike Earth, lack any moving continents."</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><article class="layout-article" id="firehose-57772985">
+        <header class="story-header">
+            
+            <h1 id="title-57772985"><a href="//news-beta.slashdot.org/story/14/03/16/2139231/alibaba-confirms-plans-to-offer-ipo-in-us">Alibaba Confirms Plans To Offer IPO In US</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~samzenpus" class="author">samzenpus (UID: 5) </a> posted  2 hours ago  | from the big-guns dept. 
+                    
+
+                    
+                </h4>
+            
+            
+                <a href="//news-beta.slashdot.org/story/14/03/16/2139231/alibaba-confirms-plans-to-offer-ipo-in-us"><span class="comment-count no-topic">39</span></a>
+            
+        </header>
+        
+        <div class="elips" data-link="//news-beta.slashdot.org/story/14/03/16/2139231/alibaba-confirms-plans-to-offer-ipo-in-us">
+            <p class="" id="text-57772985">
+                
+                    hackingbear writes <i>"China e-commerce giant Alibaba Group confirmed early Sunday that it <a href="http://news.cnet.com/8301-1023_3-57620397-93/alibaba-confirms-plans-to-offer-ipo-in-us/">plans to become a public company in the US</a>. The proposed US IPO, which is expected to raise more than $15 billion, is a bid winning over Hong Kong stock exchange, which had been competing for the offering with US stock exchanges but objected to some of Alibaba's proposed listing terms. Founded in 1999 by former English teacher Jack Ma, the Hangzhou, China company, of which Yahoo owns 24%,  provides marketplace platforms that allow merchants to sell goods directly to consumers controlling 80% of Internet e-commerce market in China."</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><article class="layout-article featured-skip" id="firehose-57771827">
+        <header class="story-header">
+            
+            <h1 id="title-57771827"><a href="//news-beta.slashdot.org/story/14/03/16/2039235/uk-government-wants-unsavory-web-content-to-be-removed">UK Government Wants "Unsavory" Web Content To Be Removed</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~samzenpus" class="author">samzenpus (UID: 5) </a> posted  3 hours ago  | from the won't-somebody-please-think-of-the-children? dept. 
+                    
+                </h4>
+            
+            
+                <a href="//news-beta.slashdot.org/story/14/03/16/2039235/uk-government-wants-unsavory-web-content-to-be-removed"><span class="comment-count no-topic">122</span></a>
+            
+        </header>
+        
+            
+                <a href="//news-beta.slashdot.org/story/14/03/16/2039235/uk-government-wants-unsavory-web-content-to-be-removed">
+                    <img class="lazy hero" src="//c.fsdn.com/s/img/grey.gif" data-original="//a.fsdn.com/sd/firehose/057/771/835-1.jpg" width="560" height="300">
+                    <noscript><img src="//a.fsdn.com/sd/firehose/057/771/835-1.jpg" width="560" heigh="300"></noscript>
+                </a>
+            
+        
+        <div class="elips" data-link="//news-beta.slashdot.org/story/14/03/16/2039235/uk-government-wants-unsavory-web-content-to-be-removed">
+            <p class="" id="text-57771827">
+                
+                    An anonymous reader writes <i>"The UK minister for immigration and security, James Brokenshire has called for the government to <a href="http://www.wired.co.uk/news/archive/2014-03/15/government-web-censorship">do more to deal with 'unsavoury', rather than illegal, material online</a>. 'Terrorist propaganda online has a direct impact on the radicalisation of individuals and we work closely with the internet industry to remove terrorist material hosted in the UK or overseas,' Brokenshire told Wired.co.uk in a statement."</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><article class="layout-article featured-skip" id="firehose-57769061">
+        <header class="story-header">
+            
+            <h1 id="title-57769061"><a href="//news-beta.slashdot.org/story/14/03/16/1818202/eric-schmidt-on-why-college-is-still-worth-it">Eric Schmidt On Why College Is Still Worth It</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~samzenpus" class="author">samzenpus (UID: 5) </a> posted  5 hours ago  | from the getting-your-degree dept. 
+                    
+                </h4>
+            
+            
+                <a href="//news-beta.slashdot.org/story/14/03/16/1818202/eric-schmidt-on-why-college-is-still-worth-it"><span class="comment-count no-topic">121</span></a>
+            
+        </header>
+        
+            
+                <a href="//news-beta.slashdot.org/story/14/03/16/1818202/eric-schmidt-on-why-college-is-still-worth-it">
+                    <img class="lazy hero" src="//c.fsdn.com/s/img/grey.gif" data-original="//a.fsdn.com/sd/firehose/057/769/069-1.jpg" width="560" height="300">
+                    <noscript><img src="//a.fsdn.com/sd/firehose/057/769/069-1.jpg" width="560" heigh="300"></noscript>
+                </a>
+            
+        
+        <div class="elips" data-link="//news-beta.slashdot.org/story/14/03/16/1818202/eric-schmidt-on-why-college-is-still-worth-it">
+            <p class="" id="text-57769061">
+                
+                    An anonymous reader writes <i>"The wisdom of getting a college degree and saddling yourself with a huge amount of debt has been called into question recently, but not by Eric Schmidt. The Google Chairman says <a href="http://techcrunch.com/2014/03/16/googles-eric-schmidt-on-critics-who-say-college-isnt-worth-it-theyre-just-wrong/">it's still worth it</a>, noting that: 'The economic return to higher education over a lifetime produces significant compound greater earnings.' From the article: 'When asked about the difficulty in paying for college, Schmidt was adamant: "I appreciate it's expensive and we need to fix that," he said, but "figure out a way to do it." One potential problem with Schmidt's statement is that it was an argument for the average student. It may be more advantageous for students at the bottom and top quartiles of the talent distribution to go straight into the workforce (or get vocational training). Case in point, Mark Zuckerberg dropped out of college, and I don't think anybody would say he made a mistake.'"</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><article class="layout-article" id="firehose-57768823">
+        <header class="story-header">
+            
+            <h1 id="title-57768823"><a href="//news-beta.slashdot.org/story/14/03/16/187240/jack-a-kinzler-savior-of-the-skylab-mission-dies-at-94">Jack A. Kinzler Savior of the Skylab Mission, Dies At 94</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~samzenpus" class="author">samzenpus (UID: 5) </a> posted  6 hours ago  | from the rest-in-peace dept. 
+                    
+
+                    
+                </h4>
+            
+            
+                <a href="//news-beta.slashdot.org/story/14/03/16/187240/jack-a-kinzler-savior-of-the-skylab-mission-dies-at-94"><span class="comment-count no-topic">23</span></a>
+            
+        </header>
+        
+        <div class="elips" data-link="//news-beta.slashdot.org/story/14/03/16/187240/jack-a-kinzler-savior-of-the-skylab-mission-dies-at-94">
+            <p class="" id="text-57768823">
+                
+                    puddingebola writes <i>"From his New York Times Obituary, 'Had <a href="http://www.nytimes.com/2014/03/15/us/jack-kinzler-skylabs-savior-dies-at-94.html">Jack A. Kinzler</a> not built model planes as a boy, had he not visited the post office as a youth and had he not, as a grown man, purchased four fishing rods at $12.95 apiece, Skylab &mdash; the United States' $2.5 billion space station &mdash; would very likely have been forfeit.' An excellent obit from the NYT, recounting the story of how Kinzler saved the Skylab mission with a telescoping parasol to patch a damaged heat shield. An inventive thinker and tinkerer, Mr. Kinzler was also responsible for the flags and plaques placed during the Apollo mission."</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><article class="layout-article" id="firehose-57764293">
+        <header class="story-header">
+            
+            <h1 id="title-57764293"><a href="//yro-beta.slashdot.org/story/14/03/16/1426201/sons-of-anarchy-creator-on-google-copyright-anarchy"><em>Sons of Anarchy</em> Creator On Google Copyright Anarchy</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~samzenpus" class="author">samzenpus (UID: 5) </a> posted  7 hours ago  | from the samcro-hates-piracy dept. 
+                    
+
+                    
+                </h4>
+            
+            
+                <a href="//yro-beta.slashdot.org/story/14/03/16/1426201/sons-of-anarchy-creator-on-google-copyright-anarchy"><span class="comment-count no-topic">197</span></a>
+            
+        </header>
+        
+        <div class="elips" data-link="//yro-beta.slashdot.org/story/14/03/16/1426201/sons-of-anarchy-creator-on-google-copyright-anarchy">
+            <p class="" id="text-57764293">
+                
+                    theodp writes <i>"Over at Slate, <i>Sons of Anarchy</i> creator <a href="http://en.wikipedia.org/wiki/Kurt_Sutter">Kurt Sutter</a> argues that <a href="http://www.slate.com/articles/technology/technology/2014/03/sons_of_anarchy_creator_kurt_sutter_google_s_copyright_stance_is_bad_for.html">Google's anti-copyright stance is just a way to devalue content</a>, which is bad for artists and bad for consumers. The screed is Sutter's response to an earlier <a href="http://www.slate.com/blogs/future_tense/2014/03/10/sopa_copyright_voluntary_agreements_hollywood_lobbyists_are_like_exes_who.html?wpisrc=burger_bar">anti-copyright rant</a> in <em>Slate</em> penned by a lawyer who represents Google and is a Fellow at the <a href="http://www.newamerica.org/about/funding">New America Foundation</a>, a public policy institute chaired by Google Chairman Eric Schmidt that receives funding from Schmidt and Google. 'Everyone is aware that Google has done amazing things to revolutionize our Internet experience,' writes Sutter. 'And I'm sure Mr. and Mrs. Google are very nice people. But the big G doesn't contribute anything to the work of creatives. Not a minute of effort or a dime of financing. Yet Google wants to take our content, devalue it, and <a href="http://www.youtube.com/results?search_query=%22sons%20of%20anarchy%22">make it available</a> for criminals to pirate for profit. Convicted felons like Kim Dotcom generate millions of dollars in illegal revenue off our stolen creative work. People access Kim through Google. And then, when Hollywood tries to impede that thievery, it's presented to the masses as a desperate attempt to hold on to antiquated copyright laws that will kill your digital buzz. It's so absurd that Google is still presenting itself as the lovable geek who's the friend of the young everyman. Don't kid yourself, kids: Google is the establishment. It is a multibillion-dollar information portal that makes dough off of every click on its page and every data byte it streams. Do you really think Google gives a s**t about free speech or your inalienable right to access unfettered content? Nope. You're just another revenue resource Google can access to create more traffic and more data streams. Unfortunately, those streams are now pristine, digital ones of our work, which all flow into a huge watershed of semi-dirty cash. If you want to know more about how this works, just Google the word "parasite."'"</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><article class="layout-article featured-skip" id="firehose-57764183">
+        <header class="story-header">
+            
+            <h1 id="title-57764183"><a href="//news-beta.slashdot.org/story/14/03/16/1418201/us-navy-strategists-have-a-long-history-of-finding-the-lost">US Navy Strategists Have a Long History of Finding the Lost</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~samzenpus" class="author">samzenpus (UID: 5) </a> posted  8 hours ago  | from the serach-continues dept. 
+                    
+
+                    
+                </h4>
+            
+            
+                <a href="//news-beta.slashdot.org/story/14/03/16/1418201/us-navy-strategists-have-a-long-history-of-finding-the-lost"><span class="comment-count no-topic">93</span></a>
+            
+        </header>
+        
+            
+                <a href="//news-beta.slashdot.org/story/14/03/16/1418201/us-navy-strategists-have-a-long-history-of-finding-the-lost">
+                    <img class="lazy hero" src="//c.fsdn.com/s/img/grey.gif" data-original="//a.fsdn.com/sd/firehose/057/765/355-1.jpg" width="560" height="300">
+                    <noscript><img src="//a.fsdn.com/sd/firehose/057/765/355-1.jpg" width="560" heigh="300"></noscript>
+                </a>
+            
+        
+        <div class="elips" data-link="//news-beta.slashdot.org/story/14/03/16/1418201/us-navy-strategists-have-a-long-history-of-finding-the-lost">
+            <p class="" id="text-57764183">
+                
+                    Hugh Pickens DOT Com writes <i>"Benedict Carey reports at the NYT that the uncertainties surrounding Malaysia Airlines Flight 370's disappearance are enormous, but naval strategists have been <a href="http://www.nytimes.com/2014/03/15/science/earth/us-navy-strategists-have-a-long-history-of-finding-the-lost.html?_r=0">unraveling lost-at-sea mysteries as far back as the U-boat battles of World War II</a>, and perhaps most dramatically in 1968, when an intelligence team found the submarine Scorpion, which <a href="http://en.wikipedia.org/wiki/USS_Scorpion_(SSN-589)">sank in the North Atlantic after losing contact under equally baffling circumstances</a>. "The same approach we used with Scorpion could be applied in this case and should be," says John P. Craven who helped pioneer the use of <a href="http://en.wikipedia.org/wiki/Bayesian_search_theory">Bayesian search techniques</a> to locate objects lost at sea. "But you need to begin with the right people." The approach is a kind of crowdsourcing, but not one in which volunteers pored over satellite images, like they have in search of Flight 370. "<a href="http://www.cnn.com/2014/03/11/us/malaysia-airlines-plane-crowdsourcing-search/">That effort is akin to good Samaritans combing a forest for a lost child</a> without knowing for certain that the child is there," writes Carey. <br> <br>
+
+Instead, forecasters draw on expertise from diverse but relevant areas &mdash; in the case of finding a submarine, say, submarine command, ocean salvage, and oceanography experts, as well as physicists and engineers. Each would make an educated guess as to where the ship is, based on different scenarios: the sub was attacked; a torpedo activated onboard; a battery exploded. Craven's work was instrumental in the <a href="http://en.wikipedia.org/wiki/John_Pi%C3%B1a_Craven">Navy's search for the missing hydrogen bomb</a> that had been lost in the Mediterranean Sea, off the coast of Spain in 1966 and this is how Craven located the Scorpion. "I knew these guys and I gave probability scores to each scenario they came up with," says Craven. The men bet bottles of Chivas Regal to keep matters interesting, and after some statistical analysis, Craven zeroed in on a point about 400 miles from the Azores, near the Sargasso Sea. The sub was found about 200 yards away.<br> <br>
+
+In the case of the downed Malaysian plane, forecasters might bring in climate and ocean scientists, engineers who worked on building the plane's components and commercial pilots familiar with the route. Those specialists would then make judgments based on the scenarios already discussed as possible causes for the disappearance of Flight 370: <a href="http://www.cnn.com/2014/03/10/world/asia/malaysia-plane-scenarios/">terrorism, pilot error, sudden depressurization and engine failure</a>. Sound-detection technology in and around the Indian Ocean may aid this forecasting. The sound of the airliner's fall &mdash; if it hit the water &mdash; might already have been <a href="http://www.naval-technology.com/features/feature121453">picked up by submarines watching each other</a>. "In that case the information would be classified," says former submarine commander Alfred Scott McLare, "and we wouldn't know anything until it was released through back channels somehow.""</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><article class="layout-article" id="firehose-57764131">
+        <header class="story-header">
+            
+            <h1 id="title-57764131"><a href="//entertainment-beta.slashdot.org/story/14/03/16/1414236/transhumanist-childrens-book-argues-death-is-wrong">Transhumanist Children's Book Argues, "Death Is Wrong"</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~samzenpus" class="author">samzenpus (UID: 5) </a> posted  9 hours ago  | from the do-you-want-to-live-forever? dept. 
+                    
+
+                    
+                </h4>
+            
+            
+                <a href="//entertainment-beta.slashdot.org/story/14/03/16/1414236/transhumanist-childrens-book-argues-death-is-wrong"><span class="comment-count no-topic">229</span></a>
+            
+        </header>
+        
+            
+                <a href="//entertainment-beta.slashdot.org/story/14/03/16/1414236/transhumanist-childrens-book-argues-death-is-wrong">
+                    <img class="lazy hero" src="//c.fsdn.com/s/img/grey.gif" data-original="//a.fsdn.com/sd/firehose/057/765/341-1.jpg" width="560" height="300">
+                    <noscript><img src="//a.fsdn.com/sd/firehose/057/765/341-1.jpg" width="560" heigh="300"></noscript>
+                </a>
+            
+        
+        <div class="elips" data-link="//entertainment-beta.slashdot.org/story/14/03/16/1414236/transhumanist-childrens-book-argues-death-is-wrong">
+            <p class="" id="text-57764131">
+                
+                    destinyland writes <i>"Hoping to inspire life-extending medical research, science fiction author Gennady Stolyarov has <a href="http://jezebel.com/should-we-be-teaching-kids-they-never-have-to-die-1544372910">launched a campaign</a> to give away 1,000 free copies of his transhumanist picture book for children, <em>Death is Wrong</em>.  'My greatest fear about the future is not of technology running out of control or posing existential risks to humankind,'  <a href="http://www.rationalargumentator.com/index/blog/tag/william-lloyd-garrison/">he explains</a>. 'Rather, my greatest fear is that, in the year 2045, I will be...wondering, "What happened to that Singularity we were promised by now...?"' Along with recent scientific discoveries, the book tells its young readers about long-lived plants and animals '"that point the way toward lengthening lifespans in humans,' in an attempt to avoid a future where children 'would pay no more attention to technological progress and life-extension possibilities than their predecessors did.'"</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><article class="layout-article" id="firehose-57761691">
+        <header class="story-header">
+            
+            <h1 id="title-57761691"><a href="//mobile-beta.slashdot.org/story/14/03/16/1229205/harsh-wireless-conditions-send-in-the-drone-hot-spot">Harsh Wireless Conditions? Send In the Drone Hot Spot</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~samzenpus" class="author">samzenpus (UID: 5) </a> posted  10 hours ago  | from the stay-connected dept. 
+                    
+
+                    
+                </h4>
+            
+            
+                <a href="//mobile-beta.slashdot.org/story/14/03/16/1229205/harsh-wireless-conditions-send-in-the-drone-hot-spot"><span class="comment-count no-topic">16</span></a>
+            
+        </header>
+        
+            
+                <a href="//mobile-beta.slashdot.org/story/14/03/16/1229205/harsh-wireless-conditions-send-in-the-drone-hot-spot">
+                    <img class="lazy hero" src="//c.fsdn.com/s/img/grey.gif" data-original="//a.fsdn.com/sd/firehose/057/761/733-1.jpg" width="560" height="300">
+                    <noscript><img src="//a.fsdn.com/sd/firehose/057/761/733-1.jpg" width="560" heigh="300"></noscript>
+                </a>
+            
+        
+        <div class="elips" data-link="//mobile-beta.slashdot.org/story/14/03/16/1229205/harsh-wireless-conditions-send-in-the-drone-hot-spot">
+            <p class="" id="text-57761691">
+                
+                    coondoggie writes <i>"The Defense Advanced Research Projects Agency (DARPA) has moved along a project it says would use <a href="http://www.networkworld.com/community/blog/harsh-wireless-conditions-send-drone-hot-spot">hot-spot enabled drones to bring wireless communications to even the most distant and harsh environments</a>. The project known as Fixed Wireless at a Distance is designed specifically to overcome the challenge inherent with cell communication in remote areas and this week the agency awarded L-3 $16.4 million to support the next iteration of the system."</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><article class="layout-article" id="firehose-57761471">
+        <header class="story-header">
+            
+            <h1 id="title-57761471"><a href="//news-beta.slashdot.org/story/14/03/16/1221249/federal-student-aid-requirements-at-for-profit-colleges-overhauled">Federal Student Aid Requirements At For-Profit Colleges Overhauled</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~samzenpus" class="author">samzenpus (UID: 5) </a> posted  11 hours ago  | from the new-rules dept. 
+                    
+                </h4>
+            
+            
+                <a href="//news-beta.slashdot.org/story/14/03/16/1221249/federal-student-aid-requirements-at-for-profit-colleges-overhauled"><span class="comment-count no-topic">254</span></a>
+            
+        </header>
+        
+            
+                <a href="//news-beta.slashdot.org/story/14/03/16/1221249/federal-student-aid-requirements-at-for-profit-colleges-overhauled">
+                    <img class="lazy hero" src="//c.fsdn.com/s/img/grey.gif" data-original="//a.fsdn.com/sd/firehose/057/761/717-1.jpg" width="560" height="300">
+                    <noscript><img src="//a.fsdn.com/sd/firehose/057/761/717-1.jpg" width="560" heigh="300"></noscript>
+                </a>
+            
+        
+        <div class="elips" data-link="//news-beta.slashdot.org/story/14/03/16/1221249/federal-student-aid-requirements-at-for-profit-colleges-overhauled">
+            <p class="" id="text-57761471">
+                
+                    An anonymous reader writes <i>"The U.S. Department of Education has released a proposal for new regulations that would hold colleges that receive federal student aid accountable for the employment success of their graduates. The overhaul is prompted by the fact that <a href="http://www.ed.gov/news/press-releases/obama-administration-takes-action-protect-americans-predatory-poor-performing-ca">students from for-profit colleges account for nearly 50% of all loan defaults yet only account for about 13% of the total higher education population</a>. '[O]f the for-profit gainful employment programs the Department could analyze and which could be affected by [the proposed regulations], the majority--72%--produced graduates who on average earned less than high school dropouts.'"</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><article class="layout-article" id="firehose-57761369">
+        <header class="story-header">
+            
+            <h1 id="title-57761369"><a href="//science-beta.slashdot.org/story/14/03/16/1217228/friendly-fungus-protects-our-mouths-from-invaders">Friendly Fungus Protects Our Mouths From Invaders</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~samzenpus" class="author">samzenpus (UID: 5) </a> posted  12 hours ago  | from the that's-a-mouthful dept. 
+                    
+
+                    
+                </h4>
+            
+            
+                <a href="//science-beta.slashdot.org/story/14/03/16/1217228/friendly-fungus-protects-our-mouths-from-invaders"><span class="comment-count no-topic">48</span></a>
+            
+        </header>
+        
+            
+                <a href="//science-beta.slashdot.org/story/14/03/16/1217228/friendly-fungus-protects-our-mouths-from-invaders">
+                    <img class="lazy hero" src="//c.fsdn.com/s/img/grey.gif" data-original="//a.fsdn.com/sd/firehose/057/761/761-1.jpg" width="560" height="300">
+                    <noscript><img src="//a.fsdn.com/sd/firehose/057/761/761-1.jpg" width="560" heigh="300"></noscript>
+                </a>
+            
+        
+        <div class="elips" data-link="//science-beta.slashdot.org/story/14/03/16/1217228/friendly-fungus-protects-our-mouths-from-invaders">
+            <p class="" id="text-57761369">
+                
+                    sciencehabit writes <i>"When we talk about the human microbiome, bacteria usually get all the press. But microscopic fungi live in and on us, too. New research shows that <a href="http://news.sciencemag.org/biology/2014/03/friendly-fungus-protects-our-mouths-invaders">a little-known fungus called Pichia</a> lives in healthy mouths and may play an important role in protecting us from an infection caused by the harmful fungus Candida. The friendly fungus makes a substance that may even lead to a new anti-fungal drug."</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><article class="layout-article" id="firehose-57753941">
+        <header class="story-header">
+            
+            <h1 id="title-57753941"><a href="//science-beta.slashdot.org/story/14/03/16/0457256/the-billionaires-privatizing-american-science">The Billionaires Privatizing American Science</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~Soulskill" class="author">Soulskill (UID: 1459) </a> posted  13 hours ago  | from the easy-funding-in-four-words:-lab-rat-reality-show dept. 
+                    
+                </h4>
+            
+            
+                <a href="//science-beta.slashdot.org/story/14/03/16/0457256/the-billionaires-privatizing-american-science"><span class="comment-count no-topic">222</span></a>
+            
+        </header>
+        
+        <div class="elips" data-link="//science-beta.slashdot.org/story/14/03/16/0457256/the-billionaires-privatizing-american-science">
+            <p class="" id="text-57753941">
+                
+                    An anonymous reader writes <i>"Government-funded science is struggling in the United States. With the unstable economy over the past decade and the growing hostility to science in popular rhetoric, basic research money is getting hard to find. <a href="http://www.nytimes.com/2014/03/16/science/billionaires-with-big-ideas-are-privatizing-american-science.html?hp&amp;_r=0">Part of the gap is being filled by billionaire philanthropists</a>. Steven Edwards of the American Association for the Advancement of Science says, 'For better or worse, the practice of science in the 21st century is becoming shaped less by national priorities or by peer-review groups and more by the particular preferences of individuals with huge amounts of money.' Vast amounts of research are now driven by names like Bill Gates, Michael Bloomberg, David Koch, and Eric Schmidt. While this helps in some ways, it can hurt in others. 'Many of the patrons, they say, are ignoring basic research &mdash; the kind that investigates the riddles of nature and has produced centuries of breakthroughs, even whole industries &mdash; for a jumble of popular, feel-good fields like environmental studies and space exploration. ... Fundamentally at stake, the critics say, is the social contract that cultivates science for the common good.'"</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><article class="layout-article" id="firehose-57754935">
+        <header class="story-header">
+            
+            <h1 id="title-57754935"><a href="//games-beta.slashdot.org/story/14/03/16/0554220/measuring-the-xbox-one-against-pcs-with-titanfall">Measuring the Xbox One Against PCs With <em>Titanfall</em></a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~Soulskill" class="author">Soulskill (UID: 1459) </a> posted  yesterday  | from the now-you're-thinking-with-death-robots dept. 
+                    
+                </h4>
+            
+            
+                <a href="//games-beta.slashdot.org/story/14/03/16/0554220/measuring-the-xbox-one-against-pcs-with-titanfall"><span class="comment-count no-topic">268</span></a>
+            
+        </header>
+        
+            
+                <a href="//games-beta.slashdot.org/story/14/03/16/0554220/measuring-the-xbox-one-against-pcs-with-titanfall">
+                    <img class="lazy hero" src="//c.fsdn.com/s/img/grey.gif" data-original="//a.fsdn.com/sd/firehose/057/754/955-1.jpg" width="560" height="300">
+                    <noscript><img src="//a.fsdn.com/sd/firehose/057/754/955-1.jpg" width="560" heigh="300"></noscript>
+                </a>
+            
+        
+        <div class="elips" data-link="//games-beta.slashdot.org/story/14/03/16/0554220/measuring-the-xbox-one-against-pcs-with-titanfall">
+            <p class="" id="text-57754935">
+                
+                    An anonymous reader writes <i>"Earlier this week, Respawn Entertainment launched <em>Titanfall</em>, a futuristic first-person shooter with mechs that has been held up as the poster child for the Xbox One. The Digital Foundry blog took the opportunity to <a href="http://www.eurogamer.net/articles/digitalfoundry-2014-titanfall-next-gen-face-off">compare how the game plays on the Xbox One to its performance on a well-appointed PC</a>. Naturally, the PC version outperforms, but the compromises are bigger than you'd expect for a newly-released console. For example, it runs at an odd resolution (1408x792), the frame rate 'clearly isn't anywhere near locked' to 60fps, and there's some unavoidable screen tear. Reviews for the game are generally positive &mdash; RPS says most of the individual systems in <em>Titanfall</em> are fun, <a href="http://www.rockpapershotgun.com/2014/03/14/wot-i-think-titanfall/">but the forced multiplayer interaction is offputting</a>. Giant Bomb puts it more succinctly: '<em>Titanfall</em> is <a href="http://www.giantbomb.com/reviews/titanfall-review/1900-630/">a very specific game built for a specific type of person</a>.' Side note: the game has a 48GB install footprint on PCs, <a href="http://www.eurogamer.net/articles/digitalfoundry-2014-titanfall-tech-interview">owing largely to 35GB of uncompressed audio</a>."</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><article class="layout-article" id="firehose-57752139">
+        <header class="story-header">
+            
+            <h1 id="title-57752139"><a href="//tech-beta.slashdot.org/story/14/03/16/0329244/solar-powered-toilet-torches-waste-for-public-health">Solar-Powered Toilet Torches Waste For Public Health</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~Soulskill" class="author">Soulskill (UID: 1459) </a> posted  yesterday  | from the not-just-for-something-and-grins dept. 
+                    
+
+                    
+                </h4>
+            
+            
+                <a href="//tech-beta.slashdot.org/story/14/03/16/0329244/solar-powered-toilet-torches-waste-for-public-health"><span class="comment-count no-topic">106</span></a>
+            
+        </header>
+        
+        <div class="elips" data-link="//tech-beta.slashdot.org/story/14/03/16/0329244/solar-powered-toilet-torches-waste-for-public-health">
+            <p class="" id="text-57752139">
+                
+                    Daniel_Stuckey writes <i>"With funding from the Bill and Melinda Gates Foundation's Reinvent the Toilet challenge, [a] team has developed a toilet that <a href="http://motherboard.vice.com/read/this-fiber-optic-toilet-burns-poop-with-the-power-of-the-sun">uses concentrated solar power to scorch and disinfect human waste</a>, turning feces into a useful byproduct called <a href="http://en.wikipedia.org/wiki/Biochar">biochar</a> ... a sanitary charcoal material that is good for soils and agriculture. By converting solid waste to biochar (liquid waste is diverted elsewhere, as it's easier to deal with), the toilet thus allows for sanitary waste disposal without huge infrastructure investments. The toilet itself, <a href="http://techportal.eere.energy.gov/technology.do/techID=989">called the Sol-Char</a>, is a fascinating bit of engineering. In order to sanitize waste without the help of massive treatment facilities, Linden's team instead designed the toilet to scorch waste in a chamber heated by fiber optic cables that pipe in heat from solar collectors on the toilet's roof. 'A solar concentrator has all this light focused in on one centimeter. It'd be fine if we could bring everyone's fecal waste up to that one point, like burning it with a magnifying glass,' Linden said. 'But that's not practical, so we were thinking of other ways to concentrate that light.'"</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><!-- CINMAN: Temporarily commented out -->
+<!--
+
+
+
+
+
+
+
+ 
+ 
+<div id="firehose-day-20140315" class="daybreak fhitem-chrome">
+    <div class="grid_12 tcenter before">
+    	<div class="slant"></div>
+        <a onclick="firehose_set_options('startdate', '20140316'); return false;" href="//beta.slashdot.org/index2.pl?startdate=20140316&amp;index=1">Today</a>
+    </div>
+    <div class="grid_12 tcenter after">
+    	<div class="slant"></div>
+        <a onclick="firehose_set_options('startdate', '20140315');  return false;" href="//beta.slashdot.org/index2.pl?startdate=20140315&amp;index=1">Yesterday</a>
+    </div>
+</div>
+--><article class="layout-article" id="firehose-57748953">
+        <header class="story-header">
+            
+            <h1 id="title-57748953"><a href="//tech-beta.slashdot.org/story/14/03/16/0057256/the-era-of-facebook-is-an-anomaly">The Era of Facebook Is an Anomaly</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~Soulskill" class="author">Soulskill (UID: 1459) </a> posted  yesterday  | from the let's-get-back-to-business-as-usual dept. 
+                    
+                </h4>
+            
+            
+                <a href="//tech-beta.slashdot.org/story/14/03/16/0057256/the-era-of-facebook-is-an-anomaly"><span class="comment-count no-topic">229</span></a>
+            
+        </header>
+        
+        <div class="elips" data-link="//tech-beta.slashdot.org/story/14/03/16/0057256/the-era-of-facebook-is-an-anomaly">
+            <p class="" id="text-57748953">
+                
+                    An anonymous reader writes <i>"Speaking to The Verge, author and Microsoft Researcher Danah Boyd put words to a feeling I've had about Facebook and other social networking sites for a while, now: '<a href="http://www.theverge.com/2014/3/13/5488558/danah-boyd-interview-the-era-of-facebook-is-an-anomaly">The era of Facebook is an anomaly</a>.' She continues, 'The idea of everybody going to one site is just weird. Give me one other part of history where everybody shows up to the same social space. Fragmentation is a more natural state of being. Is your social dynamic interest-driven or is it friendship-driven? Are you going there because there's this place where other folks are really into anime, or is this the place you're going because it's where your pals from school are hanging out? That first [question] is a driving function.' Personally, I hope this idea continues to propagate &mdash; it's always seemed odd that our social network identities are locked into certain websites. Imagine being a Comcast customer and being unable to email somebody using Time Warner, or a T-Mobile subscriber who can't call somebody who's on Verizon. Why do we allow this with our social networks?"</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><article class="layout-article" id="firehose-57746857">
+        <header class="story-header">
+            
+            <h1 id="title-57746857"><a href="//news-beta.slashdot.org/story/14/03/15/2322229/firefox-was-the-most-attacked-exploited-browser-at-pwn2own-2014">Firefox Was the Most Attacked &amp; Exploited Browser At Pwn2own 2014</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~Soulskill" class="author">Soulskill (UID: 1459) </a> posted  yesterday  | from the foxes-provide-the-best-sport dept. 
+                    
+
+                    
+                </h4>
+            
+            
+                <a href="//news-beta.slashdot.org/story/14/03/15/2322229/firefox-was-the-most-attacked-exploited-browser-at-pwn2own-2014"><span class="comment-count no-topic">178</span></a>
+            
+        </header>
+        
+        <div class="elips" data-link="//news-beta.slashdot.org/story/14/03/15/2322229/firefox-was-the-most-attacked-exploited-browser-at-pwn2own-2014">
+            <p class="" id="text-57746857">
+                
+                    darthcamaro writes <i>"Though IE, Chrome and Safari were all attacked and all were exploited, no single web browser was exploited at this year's Pwn2own hacking challenge as Mozilla Firefox. A fully patched version of Firefox was exploited four different times by attackers, each revealing new zero-day vulnerabilities in the open-source web browser. When <a href="http://www.eweek.com/security/pwn2own-2014-claims-ie-chrome-safari-and-more-firefox-zero-days.html">asked why Mozilla was attacked so much this year</a>, Sid Stamm, senior engineering manager of security and privacy said, 'Pwn2Own offers very large financial incentives to researchers to expose vulnerabilities, and that may have contributed in part to the researchers' decision to wait until now to share their work and help protect Firefox users.' The Pwn2own event <a href="http://nakedsecurity.sophos.com/2014/03/13/pwn2own-day-one-reader-ie-flash-and-firefox-felled-java-left-standing/">paid researchers $50,000 for each Firefox vulnerability</a>. Mozilla now pays researcher only $3,000 per vulnerability."</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><article class="layout-article" id="firehose-57743007">
+        <header class="story-header">
+            
+            <h1 id="title-57743007"><a href="//tech-beta.slashdot.org/story/14/03/15/2034234/transformer-style-scooter-lets-you-ride-your-briefcase-to-work">Transformer-Style Scooter Lets You Ride Your Briefcase To Work</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~Soulskill" class="author">Soulskill (UID: 1459) </a> posted  yesterday  | from the pretty-much-what-meets-the-eye dept. 
+                    
+
+                    
+                </h4>
+            
+            
+                <a href="//tech-beta.slashdot.org/story/14/03/15/2034234/transformer-style-scooter-lets-you-ride-your-briefcase-to-work"><span class="comment-count no-topic">93</span></a>
+            
+        </header>
+        
+        <div class="elips" data-link="//tech-beta.slashdot.org/story/14/03/15/2034234/transformer-style-scooter-lets-you-ride-your-briefcase-to-work">
+            <p class="" id="text-57743007">
+                
+                    cartechboy writes <i>"If you're going to sell a brief case for $6,000, there better be a pony inside &mdash; or at least an electric scooter. Who wouldn't want to <a href="http://www.greencarreports.com/news/1090880_electric-scooter-in-a-briefcase-would-you-pay-6000-for-it">transform their boring old briefcase into an electric scooter</a> and zip off to (or away from) work? The Commute-Case, as it's known, is essentially a briefcase you can ride to work. While in briefcase mode, if you extend sections of the front and back, wheels, handlebars and a step for your feet pop out. In 3 to 5 seconds, your briefcase is <a href="http://www.greencarreports.com/pictures/1090880_electric-scooter-in-a-briefcase-would-you-pay-6000-for-it_gallery-1#100460728">now an electric scooter</a> that can go up to 25 miles on a single charge and weighs 27 pounds. Don't count on actually carrying stuff to work with this briefcase (there's a scooter inside)."</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><article class="layout-article" id="firehose-57741199">
+        <header class="story-header">
+            
+            <h1 id="title-57741199"><a href="//science-beta.slashdot.org/story/14/03/15/1922208/medicine-delivered-by-flying-drones">Medicine Delivered By Flying Drones</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~Soulskill" class="author">Soulskill (UID: 1459) </a> posted  yesterday  | from the because-walking-down-the-block-is-too-much-effort dept. 
+                    
+
+                    
+                </h4>
+            
+            
+                <a href="//science-beta.slashdot.org/story/14/03/15/1922208/medicine-delivered-by-flying-drones"><span class="comment-count no-topic">41</span></a>
+            
+        </header>
+        
+        <div class="elips" data-link="//science-beta.slashdot.org/story/14/03/15/1922208/medicine-delivered-by-flying-drones">
+            <p class="" id="text-57741199">
+                
+                    A company has launched a service in San Francisco to <a href="http://blog.sfgate.com/techchron/2014/03/13/drones-to-delivery-drugstore-items-in-the-mission/">deliver medicine and other drug store items via airborne drone</a>. The company, QuiQui, chose the Mission district of San Francisco for its lack of tall buildings and generally flat landscape, which makes it much easier for the flying drones to get around. They're working with pharmacies to deliver medicine because the packages are typically very small and easy for the drones to carry. QuiQui has been working on the concept for two years even though they knew it was likely to be illegal. They were surprised when <a href="http://motherboard.vice.com/read/commercial-drones-are-completely-legal-a-federal-judge-ruled?trk_source=homepage-lede">the FAA lost its lawsuit</a> earlier this month to block commercial drone use, but they're taking the opportunity to push forward. They haven't yet resolved what to do about delivering regulated substances.
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><article class="layout-article" id="firehose-57740145">
+        <header class="story-header">
+            
+            <h1 id="title-57740145"><a href="//games-beta.slashdot.org/story/14/03/15/1847226/steam-controller-drops-touchscreen">Steam Controller Drops Touchscreen</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~Soulskill" class="author">Soulskill (UID: 1459) </a> posted  yesterday  | from the walking-back-innovation dept. 
+                    
+                </h4>
+            
+            
+                <a href="//games-beta.slashdot.org/story/14/03/15/1847226/steam-controller-drops-touchscreen"><span class="comment-count no-topic">71</span></a>
+            
+        </header>
+        
+            
+                <a href="//games-beta.slashdot.org/story/14/03/15/1847226/steam-controller-drops-touchscreen">
+                    <img class="lazy hero" src="//c.fsdn.com/s/img/grey.gif" data-original="//a.fsdn.com/sd/firehose/057/740/211-1.jpg" width="560" height="300">
+                    <noscript><img src="//a.fsdn.com/sd/firehose/057/740/211-1.jpg" width="560" heigh="300"></noscript>
+                </a>
+            
+        
+        <div class="elips" data-link="//games-beta.slashdot.org/story/14/03/15/1847226/steam-controller-drops-touchscreen">
+            <p class="" id="text-57740145">
+                
+                    An anonymous reader writes <i>"Last year Valve announced a <a href="http://hardware.slashdot.org/story/13/09/27/1732229/valve-announces-steam-controller">new game controller</a> that was trying to innovate on the designs that have been with us for over a decade now. The biggest changes were replacing analog sticks with circular touchpads and plopping a small touchscreen into the middle of the controller. Valve has now revamped their prototype hardware, and <a href="http://arstechnica.com/gaming/2014/03/valve-replaces-steam-controller-touchscreen-with-new-analog-face-buttons/">the touchscreen is nowhere to be seen</a>. In its place are stop/play buttons (which appear similar to start/select buttons) and a bigger Steam logo button. They've also moved around the directional and ABXY buttons, reverting to a more traditional layout (<a href="http://media.steampowered.com/img/steamuniverse/DOG_controller_MED.jpg">picture</a>). They'll be demonstrating the latest prototype <a href="http://steamcommunity.com/groups/steamuniverse/announcements/detail/1838898818826593734">next week at GDC</a>."</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article><article class="layout-article" id="firehose-57740093">
+        <header class="story-header">
+            
+            <h1 id="title-57740093"><a href="//science-beta.slashdot.org/story/14/03/15/1846228/forests-around-chernobyl-arent-decaying-properly">Forests Around Chernobyl Aren't Decaying Properly</a></h1>
+            
+                <h4>
+                    
+                    <a href="//beta.slashdot.org/~Soulskill" class="author">Soulskill (UID: 1459) </a> posted  yesterday  | from the this-is-what-happens-when-forests-aren't-educated-properly dept. 
+                    
+                </h4>
+            
+            
+                <a href="//science-beta.slashdot.org/story/14/03/15/1846228/forests-around-chernobyl-arent-decaying-properly"><span class="comment-count no-topic">154</span></a>
+            
+        </header>
+        
+            
+                <a href="//science-beta.slashdot.org/story/14/03/15/1846228/forests-around-chernobyl-arent-decaying-properly">
+                    <img class="lazy hero" src="//c.fsdn.com/s/img/grey.gif" data-original="//a.fsdn.com/sd/firehose/057/740/149-1.jpg" width="560" height="300">
+                    <noscript><img src="//a.fsdn.com/sd/firehose/057/740/149-1.jpg" width="560" heigh="300"></noscript>
+                </a>
+            
+        
+        <div class="elips" data-link="//science-beta.slashdot.org/story/14/03/15/1846228/forests-around-chernobyl-arent-decaying-properly">
+            <p class="" id="text-57740093">
+                
+                    An anonymous reader writes <i>"Smithsonian Magazine has an article about one of the non-obvious effects of the Chernobyl nuclear meltdown: <a href="http://www.smithsonianmag.com/science-nature/forests-around-chernobyl-arent-decaying-properly-180950075/?no-ist">dead organisms are not decomposing correctly</a>. 'According to a new study (<a href="http://link.springer.com/article/10.1007%2Fs00442-014-2908-8">abstract</a>) published in <em>Oecologia</em>, decomposers&mdash;organisms such as microbes, fungi and some types of insects that drive the process of decay&mdash;have also suffered from the contamination. These creatures are responsible for an essential component of any ecosystem: recycling organic matter back into the soil. Issues with such a basic-level process, the authors of the study think, could have compounding effects for the entire ecosystem.' The scientists took bags of fallen leaves to various areas around Chernobyl and found that locations with more radiation caused the leaves to retain more than half of their original weight after almost a year. They're now beginning to worry that almost three decades of dead brush buildup is contributing to the area's fire risk, and a large fire could distribute radioactive material beyond <a href="http://en.wikipedia.org/wiki/Chernobyl_Exclusion_Zone">Chernobyl's exclusion zone</a>."</i>
+                    
+                
+            </p>
+        </div>
+        <footer class="article-footer">
+        
+        </footer>
+    </article>
+            <article>
+<ul class="story-nav">
+
+
+
+
+
+	
+	
+
+	
+	<li class="pull-left old">
+		<a href="//beta.slashdot.org/?page=1"  class="btn btn-nav"><i class="fa fa-chevron-left"></i> Older</a>
+	</li>
+	
+
+	
+
+
+
+
+</ul>
+</article>
+        
+        </div>
+    </div>
+    <div class="col-rail rail-right pull-right no-nav">
+        <!-- Uncomment when newsletter is ready -->
+        <!-- <aside class="layout-rail">
+            <div class="rail-module">
+                <h3 class="center-align">Get the Slashdot Newsletter <span><a href="/" class="open-newletter">Sign up!</a></span></h3>
+            </div>
+        </aside> -->
+        <aside class="layout-rail">
+            <div class="rail-module">
+                <div id="geojobs" class="slashbox"></div>
+                <div class="search">
+                    <form action="//beta.slashdot.org/job_board.pl" method="post">
+                        <label for="search">Search Dice Jobs</label>
+                        <input  type="text" name="job_text" placeholder="Search Jobs" maxlength="80">
+                        <button type="submit" name="job_search_submit">Search</button>
+                    </form>
+                    <!-- <a class="seeall-links" href="//beta.slashdot.org/job_board.pl" target="_blank">See All Jobs</a> -->
+                </div>
+                <footer class="poweredby logo-dice-small pull-right">
+                    <a href="http://www.dice.com?CMPID=AF_SD_UP_JS_AV_OG_BN_&utm_source=Slashdot&utm_medium=Affiliate&utm_content=&utm_campaign=Advocacy_Ongoing" target="_blank">Powered by <span>Dice Jobs</span></a>
+                </footer>
+            </div>
+        </aside>
+        <aside class="layout-rail"><div class="rail-module"><!-- ad position 83 -->
+	<!-- DoubleClick Ad Tag -->
+<div id="fad83">
+		
+			
+	
+	<script type="text/javascript">
+	//<![CDATA[
+
+		var hint   = 'mainpage';
+
+	document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/ostg.slashdot/pg_index_p83_medrec;pg=index2;page='+dfp_page+';site=beta;logged_in=0;tile='+dfp_tile+';sz=300x250,300x600;tpc='+dfp_tpc+';u=;ord='+dfp_ord+'?"><\/script>');
+		dfp_tile++;
+	//]]>
+	</script>
+			
+		
+</div>
+<!-- End DoubleClick Ad Tag --></div></aside><aside class="layout-rail" id="poll">
+	<div class="rail-module">
+		<header id="poll-title">
+        	<h4 class="icon-poll-sm">Slashdot Poll</h4>
+	</header>
+		<form action="//beta.slashdot.org/pollBooth.pl" method="post" class="rail-poll">
+			<input type="hidden" name="qid" value="2717">
+			
+				<input type="hidden" name="section" value="slashdot">
+			
+			<fieldset>
+				<legend>How much time do you spend gaming compared to 10 years ago?</legend>
+				<ul>
+					
+					<li>
+						<input type="radio" name="aid" value="1" id="answer1">
+						<label for="answer1"><span></span>Significantly more</label>
+					</li>
+					
+					<li>
+						<input type="radio" name="aid" value="2" id="answer2">
+						<label for="answer2"><span></span>Somewhat more</label>
+					</li>
+					
+					<li>
+						<input type="radio" name="aid" value="3" id="answer3">
+						<label for="answer3"><span></span>About the same</label>
+					</li>
+					
+					<li>
+						<input type="radio" name="aid" value="4" id="answer4">
+						<label for="answer4"><span></span>Somewhat less</label>
+					</li>
+					
+					<li>
+						<input type="radio" name="aid" value="5" id="answer5">
+						<label for="answer5"><span></span>Significantly less</label>
+					</li>
+					
+					<li>
+						<input type="radio" name="aid" value="6" id="answer6">
+						<label for="answer6"><span></span>Does playing Candyland with my kid count?</label>
+					</li>
+					
+				</ul>
+			</fieldset>
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary">Vote</button>
+				
+				<span><a href="/poll/2717/how-much-time-do-you-spend-gaming-compared-to-10-years-ago">8 comments</a> | 628 Votes.</span>
+			</div>
+		</form>
+		
+	</div>
+</aside><aside class="layout-rail"><div class="rail-module"><!-- ad position 86 -->
+	<!-- DoubleClick Ad Tag -->
+<div id="fad86">
+		
+			
+	
+	<script type="text/javascript">
+	//<![CDATA[
+
+		var hint   = 'mainpage';
+
+	document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/ostg.slashdot/pg_index_CPL_medrec;pg=index2;page='+dfp_page+';site=beta;logged_in=0;tile='+dfp_tile+';sz=300x250,300x600;tpc='+dfp_tpc+';u=;ord='+dfp_ord+'?"><\/script>');
+		dfp_tile++;
+	//]]>
+	</script>
+			
+		
+</div>
+<!-- End DoubleClick Ad Tag --></div></aside><aside class="layout-rail"><div class="rail-module"><!-- ad position 85 -->
+	<!-- DoubleClick Ad Tag -->
+<div id="fad85">
+		
+			
+	
+	<script type="text/javascript">
+	//<![CDATA[
+
+		var hint   = 'mainpage';
+
+	document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/ostg.slashdot/pg_index_p85_medrec;pg=index2;page='+dfp_page+';site=beta;logged_in=0;tile='+dfp_tile+';sz=300x250,300x600;tpc='+dfp_tpc+';u=;ord='+dfp_ord+'?"><\/script>');
+		dfp_tile++;
+	//]]>
+	</script>
+			
+		
+</div>
+<!-- End DoubleClick Ad Tag --></div></aside><aside class="layout-rail" id="slashtv">
+	<div class="rail-module">
+		<header id="slashtv-title">
+        	<h4 class="icon-slashtv-sm">Featured Video</h4>
+	</header>
+		<script>
+var ooyala_video_player_data = {
+	templates: 'widget.html',
+	widgetUrl: '',
+	thumbnail: 'http://ak.c.ooyala.com/Z5cXdjazql6JYC_4_ZV7xGG5FuuSfLpo/fylOjp5pkC-GA4Zn4xMDoxOjBrO-I4W8',
+	player: 'a6b31e7305f7475795ef1c798c495905',
+	embed: 'Z5cXdjazql6JYC_4_ZV7xGG5FuuSfLpo',
+	title: 'The gTar is "The First Guitar That Anybody Can Play"',
+};
+</script>
+<script src="//c.fsdn.com/s/videoplayer/widget.js?alpha_20140220"></script>
+<div class="geeknet-video-widget-holder" data-templates="/images/videoplayer/widget.html"></div>
+		
+	</div>
+</aside><aside class="layout-rail" id="thisday">
+	<div class="rail-module">
+		<header id="thisday-title">
+        	<h4 class="icon-thisday-sm">This Day on Slashdot</h4>
+	</header>
+		<div class="slashbox">
+	<ul class="slashbox-list">
+		
+		
+		<li>
+			<strong>2013</strong>
+			<a href="//beta.slashdot.org/story/13/02/21/0024211/us-ceo-says-french-workers-have-three-hour-work-day?sbsrc=thisday">US CEO Says French Workers Have Three-Hour Work Day<br><span>1313 comments</span></a>
+		</li>
+		
+		
+		<li>
+			<strong>2012</strong>
+			<a href="//politics-beta.slashdot.org/story/12/02/21/2247229/santorum-calls-democrats-anti-science?sbsrc=thisday">Santorum Calls Democrats 'Anti-Science'<br><span>1237 comments</span></a>
+		</li>
+		
+		
+		<li>
+			<strong>2005</strong>
+			<a href="//beta.slashdot.org/story/05/02/21/0143223/the-return-of-the-pop-up-ad?sbsrc=thisday">The Return Of The Pop-Up Ad<br><span>1129 comments</span></a>
+		</li>
+		
+		
+		<li>
+			<strong>2003</strong>
+			<a href="//ask-beta.slashdot.org/story/03/02/21/0859220/advice-you-would-give-to-your-12-year-old-self?sbsrc=thisday">Advice You Would Give to Your 12 Year-Old Self?<br><span>1642 comments</span></a>
+		</li>
+		
+		
+		<li>
+			<strong>2002</strong>
+			<a href="//ask-beta.slashdot.org/story/02/02/20/2343218/do-you-like-your-job?sbsrc=thisday">Do You Like Your Job?<br><span>1174 comments</span></a>
+		</li>
+		
+	</ul>
+</div>
+		
+	</div>
+</aside><aside class="layout-rail" id="sourceforge2">
+	<div class="rail-module">
+		<header id="sourceforge2-title">
+        	<h4 class="icon-sourceforge2-sm">Sourceforge Top Downloads</h4>
+	</header>
+		<div class="slashbox">
+	<ul class="slashbox-list">
+	
+		<li>
+			<a href="http://sourceforge.net/projects/cpuminer/?source=sdslashbox">cpuminer<br><span>8.71M Downloads</span></a>
+		</li>
+	
+		<li>
+			<a href="http://sourceforge.net/projects/npppluginmgr/?source=sdslashbox">Notepad++ Plugin Manager<br><span>7.53M Downloads</span></a>
+		</li>
+	
+		<li>
+			<a href="http://sourceforge.net/projects/corefonts/?source=sdslashbox">Smart package of Microsoft's core fonts<br><span>2.69M Downloads</span></a>
+		</li>
+	
+		<li>
+			<a href="http://sourceforge.net/projects/mingw/?source=sdslashbox">MinGW - Minimalist GNU for Windows<br><span>1.92M Downloads</span></a>
+		</li>
+	
+		<li>
+			<a href="http://sourceforge.net/projects/portableapps/?source=sdslashbox">PortableApps.com: Portable Software/USB<br><span>1.23M Downloads</span></a>
+		</li>
+	
+		<li>
+			<a href="http://sourceforge.net/projects/aresgalaxy/?source=sdslashbox">Ares Galaxy<br><span>1.2M Downloads</span></a>
+		</li>
+	
+		<li>
+			<a href="http://sourceforge.net/projects/openofficeorg.mirror/?source=sdslashbox">Apache OpenOffice<br><span>1.04M Downloads</span></a>
+		</li>
+	
+	</ul>
+	<footer class="poweredby logo-sf-small pull-right">
+		<a href="http://sourceforge.net/">Powered by <span>Source Forge</span></a>
+	</footer>
+</div>
+		
+	</div>
+</aside><aside class="layout-rail"><div class="rail-module"><!-- ad position 101 -->
+	<!-- DoubleClick Ad Tag -->
+<div id="fad101">
+		
+			
+	
+	<script type="text/javascript">
+	//<![CDATA[
+
+		var hint   = 'mainpage';
+
+	document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/ostg.slashdot/pg_index_google_medrec;pg=index2;page='+dfp_page+';site=beta;logged_in=0;tile='+dfp_tile+';sz=300x250,300x600;tpc='+dfp_tpc+';u=;ord='+dfp_ord+'?"><\/script>');
+		dfp_tile++;
+	//]]>
+	</script>
+			
+		
+</div>
+<!-- End DoubleClick Ad Tag --></div></aside>
+    </div>
+</div><div  class="container">
+    <footer id="layout-footer">
+        <h1><a href="http://slashdot.org">Slashdot: News for Nerds</a></h1>
+        <nav>
+            <ul class="day-jump">
+                <li><a href="">Today</a></li>
+                <li><a href="">Monday</a></li>
+                <li><a href="">Sunday</a></li>
+                <li><a href="">Saturday</a></li>
+                <li><a href="">Friday</a></li>
+                <li><a href="">Thursday</a></li>
+                <li><a href="">Wednesday</a></li>
+                
+                <li><a href="" class="open-forgotpw"></a></li>
+            </ul>
+        </nav>
+        <div class="bucket-wrapper">
+            <div class="bucket">
+                <ul>
+                    <li><a href="//beta.slashdot.org/faq/index.shtml#about">About Slashdot</a></li>
+                    <li><a href="//beta.slashdot.org/faq/index.shtml#who_does_this">Staff</a></li>
+                    <li><a href="mailto:feedback@slashdot.org?subject=Beta Feedback">Contact Us</a></li>
+                    <li><a href="http://slashdotmedia.com/advertising-and-marketing-services/">Advertising</a></li>
+                    <li><a href="http://slashdotmedia.com/terms-of-use/">Terms of Use</a></li>
+                    <li><a href="http://slashdotmedia.com/privacy-statement/">Privacy</a></li>
+                    <li id="teconsent"></li>
+                </ul>
+            </div>
+            <div class="bucket">
+                <ul>
+                    <li><a href="//beta.slashdot.org/faq/index.shtml">FAQ</a></li>
+                    <li><a href="//beta.slashdot.org/blog">Blog</a></li>
+                    <li><a href="http://slashdot.org/archive.pl">Archived Stories</a></li>
+                    <li><a href="">Newsletter</a></li>
+                    <!-- <li><a href="/" class="open-newletter">Newsletter</a></li> -->
+                </ul>
+            </div>
+            <div class="bucket footer-sprite">
+                <ul>
+                    <li><a href="http://slashdot.org/?nobeta=1" class="sdc">Slashdot Classic</a></li>
+                    <li><a href="http://slashdot.org/hof.shtml" class="fame">Hall of Fame</a></li>
+                    <li><a href="http://www.sourceforge.net/?source=sd_beta_footer" class="sfg">Source Forge</a></li>
+                    <li><a href="http://slashdot.jp/" target="_blank" class="japan">Slashdot Japan</a></li>
+                </ul>
+            </div>
+            <div class="bucket social">
+                <span>Follow Slashdot</span>
+                <ul>
+                    <li><a href="http://www.facebook.com/slashdot" target="_blank" class="fb">Facebook</a></li>
+                    <li><a href="https://plus.google.com/113450234747488780301" target="_blank"; class="gp">Google+</a></li>
+                    <li><a href="http://twitter.com/slashdot" target="_blank" class="tw">Twitter</a></li>
+                    <li><a href="http://rss.slashdot.org/Slashdot/slashdot" target="_blank" class="rs">RSS</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="fancy">
+            <span>
+                <p>"If people are good only because they fear punishment, and hope for reward,
+then we are a sorry lot indeed."
+-- Albert Einstein</p>
+            </span>
+        </div>
+        <p>
+            Trademarks property of their respective owners. Comments owned by the poster. <br>
+            Copyright © 2014 Dice. All Rights Reserved. Slashdot is a
+            <a href="http://www.diceholdingsinc.com/phoenix.zhtml?c=211152&amp;p=irol-landing" title="The Mother Ship">Dice Holdings, Inc.</a> service
+        </p>
+    </footer>
+</div>
+
+<!-- Modal Content -->
+<div class="login-modal">
+    <div class="ui-form">
+        <form action="https://beta.slashdot.org/my/login" method="post" id="usr-login" onsubmit="if (global_returnto) { this.returnto.value = global_returnto }">
+            <input type="hidden" name="returnto" value="">
+            <input type="hidden" name="op" value="userlogin">
+            <fieldset>
+                <legend>Slashdot Account</legend>
+                <ul>
+                    <li><label><input type="text" name="unickname" placeholder="nickname" required></label></li>
+                    <li><label><input type="password" name="upasswd" placeholder="password" required></label></li>
+                </ul>
+            </fieldset>
+            <div class="ui-form-controls">
+                <button class="btn btn-primary" name="userlogin">Login</button>
+
+                <p>Need an Account? <br> <a href="/" class="pop_signup_modal" id="foobar">Sign Up Now!</a></p>
+            </div>
+        </form>
+        <span><a href="//beta.slashdot.org/faq/index.shtml#i_use_noscript" class="pop_pwd_modal">Forgot your password?</a></span>
+    </div>
+    <div class="social-login">
+        <ul>
+            <li><a href="//beta.slashdot.org/faq/index.shtml#i_use_noscript" data-provider="facebook" class="fb btn-social">Facebook</a></li>
+            <li><a href="//beta.slashdot.org/faq/index.shtml#i_use_noscript" data-provider="google"   class="gp btn-social">Google+</a></li>
+            <li><a href="//beta.slashdot.org/faq/index.shtml#i_use_noscript" data-provider="twitter"  class="tw btn-social">Twitter</a></li>
+            <li><a href="//beta.slashdot.org/faq/index.shtml#i_use_noscript" data-provider="linkedin" class="ln btn-social">LinkedIn</a></li>
+            <!--<li><a href="" id="openid"   class="op btn-social">OpenID</a></li>-->
+        </ul>
+        <p>Don't worry, we never post anything without your permission.</p>
+    </div>
+    <footer><a href="http://slashdotmedia.com/privacy-statement/">Privacy Policy</a></footer>
+</div>
+
+<!-- Submission Info Modal -->
+<div class="submission-info">
+    <article class="submission-info-ui">
+        <h1>Submission Text Formatting Tips</h1>
+        <div class="clearfix">
+            <p>We support a small subset of HTML, namely these tags:</p>
+            <ul>
+                <li>b</li>
+                <li>i</li>
+                <li>p</li>
+                <li>br</li>
+                <li>a</li>
+                <li>ol</li>
+            </ul>
+            <ul>
+                <li>ul</li>
+                <li>li</li>
+                <li>dl</li>
+                <li>dt</li>
+                <li>dd</li>
+                <li>em</li>
+            </ul>
+            <ul>
+                <li>strong</li>
+                <li>tt</li>
+                <li>blockquote</li>
+                <li>div</li>
+                <li>quote</li>
+                <li>ecode</li>
+            </ul>
+        </div>
+        <hr>
+        <div>
+            <h3>"ecode" can be used for code snippets, for example:</h3>
+            <pre><code>&lt;ecode&gt;    while(1) { do_something(); } &lt;/ecode&gt;</code></pre>
+            <div>
+            </div>
+        </div>
+    </article>
+</div>
+
+    <!-- SLASH TOUR -->
+    <div id="tour-popover">
+        <h3 class="tour-header">Header</h3>
+        <p class="tour-copy">Copy</p>
+        <button class="btn btn-primary btn-sm tour-next"></button>
+        <a href="//beta.slashdot.org/faq/learnmore.shtml" class="tour-close">Learn more</a>
+        <button class="close_btn alphatip tour-close" data-original-title="Close Tour">&times;</button>
+    </div>
+
+
+
+<!-- Newsletter Content -->
+<!-- <div class="newsletter-modal ui-modal-form">
+    <form id="newsletter-signup">
+        <fieldset>
+            <legend>Sign up for Slashdot Newsletters</legend>
+            <div class="modal-flow">
+                <p>Get more Slashdot in your inbox. Check off the email newsletter you want to recieve. Click Next to continue.</p>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="newsletter1" name="newsletter-group" value="">
+                        <label for="newsletter1" class="control-left">
+                            <i class="check-control"></i>Slashdot Headlines <span>Daliy</span>
+                            <p>15 of the hottest Slashdot.org stories of the day</p>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="newsletter2" name="newsletter-group" value="">
+                        <label for="newsletter2" class="control-left">
+                            <i class="check-control"></i>Slashback <span>Weekly</span>
+                            <p>A weekly roundup of the hottest stories from Slashdot</p>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="newsletter3" name="newsletter-group" value="3" id="answer3">
+                        <label for="newsletter3" class="control-left">
+                            <i class="check-control"></i>SlashBI Update <span>Weekly</span>
+                            <p>Business intelligence news &amp; views from journalist, developers, analysts &amp; business leaders</p>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="newsletter4" name="newsletter-group" value="4" id="answer4">
+                        <label for="newsletter4" class="control-left">
+                            <i class="check-control"></i>SlashCloud <span>Weekly</span>
+                            <p>Analysis from leading journalist, developers, analysts &amp; business leaders in cloud computing</p>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="newsletter5" name="newsletter-group" value="4" id="answer4">
+                        <label for="newsletter5" class="control-left">
+                            <i class="check-control"></i>SlashDataCenter <span>Weekly</span>
+                            <p>Experts &amp; technologists offer news and analysis examining how datacenters are evolving</p>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="newsletter6" name="newsletter-group" value="5" id="answer5">
+                        <label for="newsletter6" class="control-left">
+                            <i class="check-control"></i>Slashdot Weekly Resource <span>Weekly</span>
+                            <p>Resources on technical topics including virtualization, storage, cloud, security &amp; more</p>
+                        </label>
+                    </li>
+                </ul>
+                <div class="ui-modal-controls">
+                    <a href="/" class="btn btn-primary pull-right modal-flow-next">Next</a>
+                </div>
+            </div>
+            <div class="modal-flow">
+                <p>Please fill in your information &amp; click the Subscribe button below.</p>
+                <ul class="label-left">
+                    <li>
+                        <label>Email</label>
+                        <input type="email" id="usr_email" name="" placeholder="Please enter email address" required>
+                    </li>
+                    <li>
+                        <label>Country</label>
+                        <select name="">
+                            <option value="1">Please select a Country</option>
+                            <option value="2">two</option>
+                            <option value="3">three</option>
+                            <option value="4">four</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>Job Title</label>
+                        <select name="">
+                            <option value="1">Please select a Job Title</option>
+                            <option value="2">two</option>
+                            <option value="3">three</option>
+                            <option value="4">four</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>Company Size</label>
+                        <select name="">
+                            <option value="1">Please select a Company Size</option>
+                            <option value="2">two</option>
+                            <option value="3">three</option>
+                            <option value="4">four</option>
+                        </select>
+                    </li>
+                </ul>
+                <div class="ui-modal-controls">
+                    <button class="btn btn-primary pull-right">Subscribe</button>
+                    <a href="/" class="edit-text pull-right modal-flow-prev">Back</a>
+                </div>
+            </div>
+
+        </fieldset>
+        <footer class="modal-footer">
+            <a href="">Privacy Policy</a>
+        </footer>
+    </form>
+    <script>
+        // **************************************************************************************************
+        // Newsletter Flow: Displays correct view for the newsletter workflow
+        // **************************************************************************************************
+        (function(){
+            var $views = $('.modal-flow'),
+                $btn_next = $('.modal-flow-next'),
+                $btn_prev = $('.modal-flow-prev');
+
+            $views.hide();
+            $views.first().show();
+
+            $('body').on('click', '.modal-flow-next', nextView);
+            $('body').on('click', '.modal-flow-prev', prevView);
+
+            function nextView( evt ) {
+                evt.preventDefault();
+                $(this).closest( '.modal-flow' )
+                    .hide()
+                    .next()
+                    .show()
+            }
+
+            function prevView( evt ) {
+                evt.preventDefault();
+                $(this).closest( '.modal-flow' )
+                    .hide()
+                    .prev()
+                    .show()
+            }
+            // $("#newsletter-signup").validate({
+            //  messages: {
+            //      usr_email: {
+            //          required: 'Please enter a valid email address'
+            //      }
+            //  },
+            //  errorClass: 'form-error',
+            // });
+        })();
+    </script>
+</div> -->
+<!--SignUp Content-->
+<div id="signup-form-contents" class="signup-modal">
+    <form action="https://beta.slashdot.org/login.pl" method="post" onsubmit="if (global_returnto) { this.returnto.value = global_returnto }">
+			<fieldset>
+				<legend>Create a Slashdot Account</legend>
+			</fieldset>
+			<h3>Loading...</h3>
+		</form>
+</div>
+
+<div class="forgotpw-modal" id="forgotpw-modal-contents">
+</div>
+<script id="geojobs-template" type="text/x-handlebars-template">
+    <header id="dice_jobs-title">
+        <h4>Latest Tech Jobs</h4>
+    </header>
+    <ul class="slashbox-list">
+        {{#each resultItemList}}
+            <li>
+                <a href="{{detailUrl}}&CMPID=AF_SD_UP_JS_AV_OG_WG_&utm_source=Slashdot&utm_medium=Affiliate&utm_content=&utm_campaign=Advocacy_Ongoing" id="job_title" target="_blank" onClick="trackLinkDiceJob(this, 'JobWidget', '{{detailUrl}}');return false;">{{jobTitle}}<br><span>{{location}}</span></a>
+            </li>
+        {{/each}}
+    </ul>
+</script>
+<script src="//c.fsdn.com/s/js/libs/handlebars-v1.3.0.js?alpha_20140311"></script>
+<script src="//c.fsdn.com/s/js/plugins/slash-cookies.js?alpha_20140311"></script>
+<script src="//c.fsdn.com/s/js/plugins/slashmodal-1-0.1.js?alpha_20140311"></script>
+<script src="//c.fsdn.com/s/js/plugins/jquery.lazyload.min.js?alpha_20140311"></script>
+<script src="//c.fsdn.com/s/js/plugins/jquery.sidr.min.js?alpha_20140311"></script>
+<!-- <script src="//c.fsdn.com/s/js/plugins/tooltip.js?alpha_20140311"></script> -->
+<script src="//c.fsdn.com/s/js/plugins/jquery.validate.min.js?alpha_20140311"></script>
+<script src="//c.fsdn.com/s/js/plugins/additional-methods.min.js?alpha_20140311"></script>
+<script src="//c.fsdn.com/s/js/plugins.js?alpha_20140311"></script>
+<script src="//c.fsdn.com/s/js/scripts/main.js?alpha_20140311"></script>
+
+    <script src="//c.fsdn.com/s/js/scripts/slash-view-switch.js?alpha_20140311"></script>
+    <script src="//c.fsdn.com/s/js/plugins/bootstrap-tour-standalone.js?alpha_20140311"></script>
+    <script src="//c.fsdn.com/s/js/scripts/tour-map.js?alpha_20140311"></script>
+
+
+<!--SLASH-3947  Use TrustE Consent Manager to manage the setting of third-party advertiser cookies-->
+
+    <script type="text/javascript" src="//consent.truste.com/notice?domain=slashdot.org&c=teconsent&text=true"></script>
+
+<script>
+    $(function(){
+        $('.for-text').slashModal({
+            content     : $('.submission-info'),
+            width       : 525,
+            hide_overlay: true
+        });
+
+        $('.edit-login').on("click", function() {
+            editPreview();
+        });
+
+        $("#usr-login").validate({
+            messages: {
+                unickname: {
+                    required: 'Please eneter a valid nickname'
+                },
+                upasswd: {
+                    required: 'Please enter a valid password'
+                }
+            },
+            errorClass: 'form-error',
+        });
+
+
+        // Slider Menu
+        $('.menu-mobile').mobmenu({
+            name  : 'menu-mobile',
+            side  : 'left', // By default
+            source: '#panel-menu'
+        });
+
+        (function(){
+            var $anchor = $('a[href=""], a[href="#"]');
+            // IF ON SANDBOX ONLY COLOR ALL EMPTY ANCHOR TAGS RED
+            
+        })();
+    });
+</script>
+
+</body>
+</html>

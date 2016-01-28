@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html
+xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><head
+profile="http://gmpg.org/xfn/11"><meta
+http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title> Configure Ubuntu Linux GRUB to load FreeBSD - nixCraft</title><link
+rel="stylesheet" href="http://s0.cyberciti.org/assets/faq/mini_layout_v13.css" type="text/css" media="screen, projection" /> <!--[if lte IE 8]><link
+rel="stylesheet" href="http://s0.cyberciti.org/assets/faq/mini_ie_v03.css" type="text/css" media="screen, projection" /><![endif]--><link
+rel="canonical" href="http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html" /><link
+rel="alternate" type="application/rss+xml" title="nixCraft: Linux Tips, Hacks, Tutorials, And Ideas In Blog Format RSS Feed" href="http://feeds.cyberciti.biz/Nixcraft-LinuxFreebsdSolarisTipsTricks" /><link
+rel="pingback" href="http://www.cyberciti.biz/tips/xmlrpc.php" /><link
+rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.cyberciti.biz/tips/xmlrpc.php?rsd" /><link
+rel="alternate" type="application/rss+xml" title="nixCraft: Linux Tips, Hacks, Tutorials, And Ideas In Blog Format &raquo; Configure Ubuntu Linux GRUB to load FreeBSD Comments Feed" href="http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html/feed" /><meta
+name="description" content="Describes how to boot dual boot FreeBSD and Linux operating system using GNU boot loader called Grub (GRand Unified Bootloader) " /><meta
+name="keywords" content="grub boot loader, freebsd linux grub, partition size, root partition, root device, boot image, hard disk, kernel, configuration file, /boot/loader,/boot/grub/menu.lst, boot freebsd under Linux" /><link
+href="https://plus.google.com/+nixCraftadmin/" rel="author"/><link
+href="https://plus.google.com/+CybercitiBiz/" rel="publisher"/><link
+rel="shortcut icon" href="http://s0.cyberciti.org/static/legacy/i/favicon.ico"><meta
+name="robots" content="noarchive" /><link
+rel="dns-prefetch" href="//pagead2.googlesyndication.com"><!--
+	generated in 0.416 seconds
+	49847 bytes batcached for 300 seconds
+-->
+</head><body
+class="custom"><div
+id="container"><div
+id="page"><ul
+class="menu"><li><a
+href="http://www.cyberciti.biz/tips/about-us" title="About us">About</a></li><li><a
+href="http://www.cyberciti.biz/tips/contact-us" title="Contact us via Email">Contact us</a></li><li><a
+href="http://nixcraft.com/forum.php" title="Linux / UNIX Tech Support Forum">Forums</a></li><li><a
+href="http://www.cyberciti.biz/" title="Back to our home page">Home</a></li><li><a
+href="http://www.cyberciti.biz/faq/" title="Linux How-to Articles, Tips and Guides">Linux How-to &amp; Tutorials</a></li><li><a
+href="http://bash.cyberciti.biz/" title="Linux/UNIX Shell scripts">Shell Scripts</a></li><li
+class="rss"><a
+href="http://feeds.cyberciti.biz/Nixcraft-LinuxFreebsdSolarisTipsTricks" title="nixCraft: Linux Tips, Hacks, Tutorials, And Ideas In Blog Format RSS Feed" rel="nofollow">RSS/Feed</a></li></ul><div
+id="header"><div
+id="leaderboard"><div
+id="lbtop"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <ins
+class="adsbygoogle"
+style="display:inline-block;width:728px;height:90px"
+data-ad-client="ca-pub-7825705102693166"
+data-ad-slot="3400670370"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> </div></div><div
+id="crumbslogo"><a
+href="/" title="Home Page">nixCraft</a></div></div><div
+id="content_box"><div
+id="content" class="hfeed"><div
+class="post-878 post type-post status-publish format-standard hentry category-freebsd category-linux-desktop category-ubuntu-linux tag-bootgrubmenulst tag-boot-image tag-bootloader tag-bsd tag-centos tag-configuration-file tag-fedora tag-freebsd tag-freebsd-70 tag-gedit tag-grub-boot-loader tag-hard-disk tag-kernel tag-linux tag-linux-grub tag-partition-size tag-reboot tag-red-hat tag-root-device tag-root-partition tag-ubuntu tag-ubuntu-linux post_box top" id="post-878"><div
+class="headline_area"><h1 class="entry-title">Configure Ubuntu Linux GRUB to load FreeBSD</h1><p
+class="headline_meta">by <span
+class="author vcard"><a
+href="http://www.cyberciti.biz/tips/about-us" rel="author" class="url fn">NIX Craft</a></span> on <abbr
+class="published" title="2006-03-17">March 17, 2006</abbr> &middot; <span><a
+href="http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html#comments" rel="nofollow">14 comments</a></span>&middot; <span>LAST UPDATED <abbr
+class="updated" title="2008-04-26">April 26, 2008</abbr><span><p
+class='headline_meta'> in <span><a
+rel='tag' href='http://www.cyberciti.biz/tips/category/freebsd'>FreeBSD</a>, <a
+rel='tag' href='http://www.cyberciti.biz/tips/category/linux-desktop'>Linux desktop</a>, <a
+rel='tag' href='http://www.cyberciti.biz/tips/category/ubuntu-linux'>Ubuntu Linux</a></span></p></div><div
+class="format_text entry-content"><div
+style='float:right;margin-top:0px;margin-left:5px;'><a
+href='http://www.cyberciti.biz/tips/category/ubuntu-linux' title='See all Ubuntu Linux related FAQ'><img
+src='http://figs.cyberciti.biz/3rdparty/ubuntu-logo.jpg' border='0' /></a></div><p>Recently my friend emailed me an interesting scenario. He installed FreeBSD 6.0 / 7.0 in the first primary partition (10G). One day he installed Ubuntu Linux. He can boot into Linux but not able to boot into FreeBSD. Now, my friend wanted to boot both FreeBSD and Ubuntu Linux via Grub boot loader.</p><div
+style='float:right;margin-top:0px;margin-left:5px;'><a
+href='http://www.cyberciti.biz/tips/category/freebsd' title='See all FreeBSD related tips/articles'><img
+src='http://figs.cyberciti.biz/3rdparty/freebsd_logo_sm.png' border='0' /></a></div><p>It is not that hard to configure grub to boot FreeBSD. You just need to add following three lines to grub configuration file (/boot/grub/menu.lst). Boot into Ubuntu Linux and use text editor to edit the file /boot/grub/menu.lst ( Red hat and friends [ Fedora / CentOS ] try /etc/grub.conf file) :<br
+/> <code>$ gksudo gedit /boot/grub/menu.lst</code><br
+/> OR<br
+/> <code>$ gksudo vi /boot/grub/menu.lst</code><br
+/> Append FreeBSD  boot Configuration:</p><pre>title  FreeBSD 7.0
+root   (hd0,a)
+kernel /boot/loader</pre><p>Save and close the file. To see changes or to boot into FreeBSD reboot Ubuntu Linux box.<br
+/> Where,</p><ul><li><strong>title  FreeBSD 7.0 </strong>: Start a new boot entry. User always sees this title and hit enter key to boot os.</li><li><strong>root   (hd0,a)</strong> : Actual part is to select the correct root partition. The root option set the current root device to the device, then attempt to mount it to get the partition size. In above example - hd0 is  your first hard disk i.e. hda in Linux. In grub hda is hd0. Likewise your first, second partition on the first hard disk – hda1, hda2, becomes hd0,0 hd0,1 in Grub. In short, you are asking to use first hard first partition (remember FreeBSD use a,b,c names to represent partition names). If you have installed FreeBSD on third partition then you need to use following root statement:<br
+/> <strong>root   (hd0,2,a)</strong></li><li><strong>kernel /boot/loader</strong> : Use to load the primary boot image. FreeBSD use /boot/loader to load rest of kernel and os.</li></ul> <a
+class="btn btn-tweet" href="https://twitter.com/intent/tweet?text=Configure+Ubuntu+Linux+GRUB+to+load+FreeBSD&url=http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html&via=nixcraft" title="Tweet this tutorial/page">Twitter</a><a
+class="btn btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html" title="Share this page/tutorial on Facebook">Facebook</a><a
+class="btn btn-google" href="https://plus.google.com/share?url=http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html" title="Share this page/tutorial on Google+">Google+</a><a
+class="btn btn-pdf" href="http://www.cyberciti.biz/view/pdf/tips/878.php" title="Download this tutorial/faq as a free pdf">PDF version</a><a
+class="btn btn-typoerr" href="https://nixcraft.wufoo.com/forms/give-us-feedback-for-nixcraft/def/Field209=http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html&Field211=Configure Ubuntu Linux GRUB to load FreeBSD" target="_blank" title="Click here to report Typo/Grammer and other Incorrect information">Found an error/typo on this page? Help us!</a><br/><div
+class='my_featured_articles_1'> Featured Articles:<ul><li><a
+href="http://www.cyberciti.biz/open-source/30-cool-best-open-source-softwares-of-2013/">30 Cool Open Source Software I Discovered in 2013</a> <img
+style="verticalp-align: text-top; padding-left: 1px;" src="http://s0.cyberciti.org/static/legacy/i/new_post.png" alt="" border="0"></li><li><a
+href="http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html">30 Handy Bash Shell Aliases For Linux / Unix / Mac OS X</a></li><li><a
+href="http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/">Top 30 Nmap Command Examples For Sys/Network Admins</a></li><li><a
+href="http://www.cyberciti.biz/tips/php-security-best-practices-tutorial.html">25 PHP Security Best Practices For Sys Admins</a></li><li><a
+href="http://www.cyberciti.biz/tips/top-linux-monitoring-tools.html">20 Linux System Monitoring Tools Every SysAdmin Should Know</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-security.html">20 Linux Server Hardening Security Tips</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-iptables-examples.html">Linux: 20 Iptables Examples For New SysAdmins</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html">Top 20 OpenSSH Server Best Security Practices </a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-unix-bsd-nginx-webserver-security.html">Top 20 Nginx WebServer Best Security Practices</a><li><A
+href="http://www.cyberciti.biz/tips/check-unix-linux-configuration-file-for-syntax-errors.html">20 Examples: Make Sure Unix / Linux Configuration Files Are Free From Syntax Errors</a><li><a
+href="http://www.cyberciti.biz/open-source/best-terminal-applications-for-linux-unix-macosx/">15 Greatest Open Source Terminal Applications Of 2012</a></li><li><a
+href="http://www.cyberciti.biz/tips/my-10-unix-command-line-mistakes.html">My 10 UNIX Command Line Mistakes</a></li><li><a
+href="http://www.cyberciti.biz/tips/open-source-project-management-software.html">Top 10 Open Source Web-Based Project Management Software</a></li><li><a
+href="http://www.cyberciti.biz/tips/download-email-client-for-linux-mac-osx-windows.html">Top 5 Email Client For Linux, Mac OS X, and Windows Users</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-laptop.html">The Novice Guide To Buying A Linux Laptop</a></li></ul></div></div></div><div
+id="comments"><div
+id="comments_intro" class="comments_intro"><p><span
+class="bracket">{</span> <span>14</span> comments&#8230; read them below or <a
+href="#respond" rel="nofollow">add one</a> <span
+class="bracket">}</span></p></div><dl
+id="comment_list"><dt
+class="comment even thread-even depth-1" id="comment-19507"> <span
+class="comment_num"><a
+href="#comment-19507" title="Permalink to this comment" rel="nofollow">1</a></span> <span
+class="comment_author">seaman</span> <span
+class="comment_time">March 17, 2006 at 11:28 pm</span></dt><dd
+class="comment even thread-even depth-1"><div
+class="format_text" id="comment-body-19507"><p>If it does not want to boot you can put  something like this:</p><p>title FreeBSD<br
+/> rootnoverify (hd0,0)<br
+/> makeactive<br
+/> chainloader +1</p><p>it realy works</p><p
+class="reply"><a
+class='comment-reply-link' href='/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=19507#respond' onclick='return addComment.moveForm("comment-body-19507", "19507", "respond", "878")'>Reply</a></p></div></dd><dt
+class="comment odd alt thread-odd thread-alt depth-1" id="comment-19508"> <span
+class="comment_num"><a
+href="#comment-19508" title="Permalink to this comment" rel="nofollow">2</a></span> <span
+class="comment_author">DJ Tux</span> <span
+class="comment_time">March 18, 2006 at 1:44 am</span></dt><dd
+class="comment odd alt thread-odd thread-alt depth-1"><div
+class="format_text" id="comment-body-19508"><p>GRUB loads the kernel directly and FreeBSD&#8217;s bootstrap interface sometimes changes heavily so GRUB can&#8217;t guarantee to pass kernel parameters correctly. Thus loading it via very flexible loader i.e. /boot/loader is highly recommend.</p><p>@seaman,<br
+/> Your method is good when unsupported operating systems needs booting via GRUB. But for FreeBSD /boot/loader is highly recommend.</p><p>Cheers,</p><p>DJ Tux</p><p
+class="reply"><a
+class='comment-reply-link' href='/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=19508#respond' onclick='return addComment.moveForm("comment-body-19508", "19508", "respond", "878")'>Reply</a></p></div></dd><dt
+class="comment even thread-even depth-1" id="comment-50209"> <span
+class="comment_num"><a
+href="#comment-50209" title="Permalink to this comment" rel="nofollow">3</a></span> <span
+class="comment_author">johan</span> <span
+class="comment_time">January 3, 2007 at 1:24 pm</span></dt><dd
+class="comment even thread-even depth-1"><div
+class="format_text" id="comment-body-50209"><p>Hey,<br
+/> I dont really understand, I got ubuntu and windowsxp,, now when I start my computer I want to be able co choose one of these, what shoud I put to choose windows xp?<br
+/> have to ask so I dont do anything wrong,<br
+/> Thank you,<br
+/> Johan</p><p
+class="reply"><a
+class='comment-reply-link' href='/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=50209#respond' onclick='return addComment.moveForm("comment-body-50209", "50209", "respond", "878")'>Reply</a></p></div></dd><dt
+class="comment byuser comment-author-administrator bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-50211"> <span
+class="comment_num"><a
+href="#comment-50211" title="Permalink to this comment" rel="nofollow">4</a></span> <span
+class="comment_author"><a
+href='http://www.cyberciti.biz/tips/about-us' rel='external nofollow' class='url'>nixCraft</a></span> <span
+class="comment_time">January 3, 2007 at 1:26 pm</span></dt><dd
+class="comment byuser comment-author-administrator bypostauthor odd alt thread-odd thread-alt depth-1"><div
+class="format_text" id="comment-body-50211"><p>johan,</p><p>Do you see Windows XP as boot option? If so just select and enter. If you don&#8217;t see an option you need to edit grub.conf</p><p
+class="reply"><a
+class='comment-reply-link' href='/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=50211#respond' onclick='return addComment.moveForm("comment-body-50211", "50211", "respond", "878")'>Reply</a></p></div></dd><dt
+class="comment even thread-even depth-1" id="comment-140860"> <span
+class="comment_num"><a
+href="#comment-140860" title="Permalink to this comment" rel="nofollow">5</a></span> <span
+class="comment_author">Matrixium</span> <span
+class="comment_time">August 20, 2007 at 6:33 pm</span></dt><dd
+class="comment even thread-even depth-1"><div
+class="format_text" id="comment-body-140860"><p>Hi,<br
+/> I just install ubuntu on top of window xp. I can boot into ubuntu, but I can not boot into window xp.<br
+/> when I start my computer I was able to choose window xp as one of the choices to boot. But then the windows xp went to a autocheck,and autochecks fails. then the system restarts itself.<br
+/> can you help to solve the problem?</p><p>Thank you</p><p
+class="reply"><a
+class='comment-reply-link' href='/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=140860#respond' onclick='return addComment.moveForm("comment-body-140860", "140860", "respond", "878")'>Reply</a></p></div></dd><dt
+class="comment odd alt thread-odd thread-alt depth-1" id="comment-141451"> <span
+class="comment_num"><a
+href="#comment-141451" title="Permalink to this comment" rel="nofollow">6</a></span> <span
+class="comment_author">Marco van de Voort</span> <span
+class="comment_time">October 21, 2007 at 2:04 pm</span></dt><dd
+class="comment odd alt thread-odd thread-alt depth-1"><div
+class="format_text" id="comment-body-141451"><p>Note that partition (label) &#8220;c&#8221; is special and designates the whole disc.</p><p>P.s. it is kind of confronting having to type &#8220;linux&#8221; as antispam word on a FreeBSD topic :-)</p><p
+class="reply"><a
+class='comment-reply-link' href='/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=141451#respond' onclick='return addComment.moveForm("comment-body-141451", "141451", "respond", "878")'>Reply</a></p></div></dd><dt
+class="comment even thread-even depth-1" id="comment-143350"> <span
+class="comment_num"><a
+href="#comment-143350" title="Permalink to this comment" rel="nofollow">7</a></span> <span
+class="comment_author">cfchris6</span> <span
+class="comment_time">April 1, 2008 at 8:46 pm</span></dt><dd
+class="comment even thread-even depth-1"><div
+class="format_text" id="comment-body-143350"><p>/boot/loader did not work for me, I think that is mainly because GRUB is not able to handle the disklabels of BSD correctly because /boot/loader may be in ad0s1a but GRUB looks just in ad0s1, so GRUB does not find anything.</p><p>root(hd?,?)<br
+/> makeactive<br
+/> chainloader +1</p><p>works perfectly and gives all the possibilitiys as a bootloader directly installed on MBR.</p><p
+class="reply"><a
+class='comment-reply-link' href='/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=143350#respond' onclick='return addComment.moveForm("comment-body-143350", "143350", "respond", "878")'>Reply</a></p></div></dd><dt
+class="comment odd alt thread-odd thread-alt depth-1" id="comment-143589"> <span
+class="comment_num"><a
+href="#comment-143589" title="Permalink to this comment" rel="nofollow">8</a></span> <span
+class="comment_author">John Marino</span> <span
+class="comment_time">April 26, 2008 at 12:18 am</span></dt><dd
+class="comment odd alt thread-odd thread-alt depth-1"><div
+class="format_text" id="comment-body-143589"><p>Thanks for this article.</p><p>I was not amused tonight.  I have FreeBSD on my primary partition of my primary disk.  A few months ago I left 24GB free reserved for a Linux testbed and installed Ubuntu 8.04 tonight.  Much to my anger, it wiped out my existing bootloader and I couldn&#8217;t get back to my primary OS.</p><p>This article pointed me in the right direction &#8212; true I am now using grub instead of the freeBSD bootloader but at least I can get to FreeBSD now.</p><p
+class="reply"><a
+class='comment-reply-link' href='/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=143589#respond' onclick='return addComment.moveForm("comment-body-143589", "143589", "respond", "878")'>Reply</a></p></div></dd><dt
+class="comment even thread-even depth-1" id="comment-144311"> <span
+class="comment_num"><a
+href="#comment-144311" title="Permalink to this comment" rel="nofollow">9</a></span> <span
+class="comment_author">talishte</span> <span
+class="comment_time">July 8, 2008 at 5:01 pm</span></dt><dd
+class="comment even thread-even depth-1"><div
+class="format_text" id="comment-body-144311"><p>Thanks U</p><p
+class="reply"><a
+class='comment-reply-link' href='/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=144311#respond' onclick='return addComment.moveForm("comment-body-144311", "144311", "respond", "878")'>Reply</a></p></div></dd><dt
+class="comment odd alt thread-odd thread-alt depth-1" id="comment-144885"> <span
+class="comment_num"><a
+href="#comment-144885" title="Permalink to this comment" rel="nofollow">10</a></span> <span
+class="comment_author">Ramanathan</span> <span
+class="comment_time">September 9, 2008 at 10:56 am</span></dt><dd
+class="comment odd alt thread-odd thread-alt depth-1"><div
+class="format_text" id="comment-body-144885"><p>To enable FreeBSD 7 in Ubuntu Gibbon,<br
+/> Appending this following lines helped me.</p><p>title  FreeBSD 7<br
+/> rootnoverify (hd0,0)<br
+/> makeactive<br
+/> chainloader +1</p><p>Thanks</p><p
+class="reply"><a
+class='comment-reply-link' href='/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=144885#respond' onclick='return addComment.moveForm("comment-body-144885", "144885", "respond", "878")'>Reply</a></p></div></dd><dt
+class="comment even thread-even depth-1" id="comment-144886"> <span
+class="comment_num"><a
+href="#comment-144886" title="Permalink to this comment" rel="nofollow">11</a></span> <span
+class="comment_author">Ramanathan</span> <span
+class="comment_time">September 9, 2008 at 10:58 am</span></dt><dd
+class="comment even thread-even depth-1"><div
+class="format_text" id="comment-body-144886"><p>****************************************************<br
+/> To enable FreeBSD 7 in Ubuntu Gibbon,<br
+/> Appending this following lines in /boot/grub/menu.lst helped me.</p><p>title FreeBSD 7<br
+/> rootnoverify (hd0,0)<br
+/> makeactive<br
+/> chainloader +1</p><p>Thanks</p><p>*************************************************</p><p
+class="reply"><a
+class='comment-reply-link' href='/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=144886#respond' onclick='return addComment.moveForm("comment-body-144886", "144886", "respond", "878")'>Reply</a></p></div></dd><dt
+class="comment odd alt thread-odd thread-alt depth-1" id="comment-144887"> <span
+class="comment_num"><a
+href="#comment-144887" title="Permalink to this comment" rel="nofollow">12</a></span> <span
+class="comment_author">Ramanathan</span> <span
+class="comment_time">September 9, 2008 at 11:20 am</span></dt><dd
+class="comment odd alt thread-odd thread-alt depth-1"><div
+class="format_text" id="comment-body-144887"><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br
+/> ****************************************************<br
+/> Partition Detail<br
+/> &#8212;&#8212;&#8212;&#8212;&#8212;-<br
+/> FreeBSD is installed in the First partition of the primary IDE hard disc. Ubuntu is in second partition.</p><p>I tried the first option given in this website.<br
+/> It too worked.</p><p>The following lines are appended.</p><p>title   FreeBSD 7<br
+/> root    (hd0,0,a)<br
+/> kernel  /boot/loader</p><p>Thanks Again. :)</p><p>*************************************************</p><p
+class="reply"><a
+class='comment-reply-link' href='/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=144887#respond' onclick='return addComment.moveForm("comment-body-144887", "144887", "respond", "878")'>Reply</a></p></div></dd><dt
+class="comment even thread-even depth-1" id="comment-154562"> <span
+class="comment_num"><a
+href="#comment-154562" title="Permalink to this comment" rel="nofollow">13</a></span> <span
+class="comment_author">Dheeraj Suthar</span> <span
+class="comment_time">March 27, 2010 at 4:18 pm</span></dt><dd
+class="comment even thread-even depth-1"><div
+class="format_text" id="comment-body-154562"><p>Thanks a lot !!<br
+/> It saved my day.<br
+/> However I also used this article to restore my filesystem:<br
+/> <a
+href="http://neosmart.net/forums/showthread.php?t=1823" rel="nofollow">http://neosmart.net/forums/showthread.php?t=1823</a></p><p
+class="reply"><a
+class='comment-reply-link' href='/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=154562#respond' onclick='return addComment.moveForm("comment-body-154562", "154562", "respond", "878")'>Reply</a></p></div></dd><dt
+class="comment odd alt thread-odd thread-alt depth-1" id="comment-161559"> <span
+class="comment_num"><a
+href="#comment-161559" title="Permalink to this comment" rel="nofollow">14</a></span> <span
+class="comment_author">oriantho</span> <span
+class="comment_time">November 28, 2010 at 11:56 pm</span></dt><dd
+class="comment odd alt thread-odd thread-alt depth-1"><div
+class="format_text" id="comment-body-161559"><p>salut !! i have blowed my system and i ive tryed to restore with alive cd 1010 ..nothing happen,THEN with a 2009 version ,better but when i start i have a strange console saying :shgrub or rescue grub ,mostly i cant send any command ,the pianno don&#8217;t play all the letters proppely ..my question :do we have something to load before the live cd to make it work? a grub?linux ? if yes ,how do i empty ALL on  that computer to be sure there is nothing at all before the new setting THANKS from France and please to help you for some kind of help i can  O.</p><p
+class="reply"><a
+class='comment-reply-link' href='/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=161559#respond' onclick='return addComment.moveForm("comment-body-161559", "161559", "respond", "878")'>Reply</a></p></div></dd></dl><div
+id="respond"><div
+id="respond_intro"> <a
+rel="nofollow" id="cancel-comment-reply-link" href="/tips/configure-ubuntu-grub-to-load-freebsd.html#respond" style="display:none;">Cancel reply</a><p>Leave a Comment</p></div><form
+action="http://www.cyberciti.biz/tips/wp-comments-post.php" method="post" id="commentform"><p><input
+class="text_input" type="text" name="author" id="author" value="" tabindex="1" aria-required="true" /><label
+for="author">Name <span
+class="required" title="Required">*</span></label></p><p><input
+class="text_input" type="text" name="email" id="email" value="" tabindex="2" aria-required="true" /><label
+for="email">E-mail <span
+class="required" title="Required">*</span></label></p><p
+class="comment_box"><textarea name="comment" id="comment" tabindex="4" cols="40" rows="8"></textarea></p><p
+style="clear: both;" class="subscribe-to-comments"> <input
+type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" /> <label
+for="subscribe">Notify me of followup comments via e-mail.</label></p><p
+class="remove_bottom_margin"> <input
+name="submit" class="form_submit" type="submit" id="submit" tabindex="5" value="Submit" /> <input
+type='hidden' name='comment_post_ID' value='878' id='comment_post_ID' /> <input
+type='hidden' name='comment_parent' id='comment_parent' value='0' /></p><p
+style="display: none;"><input
+type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="c63636f158" /></p></form></div></div><p
+class="my_tagged_as">Tagged as: <a
+href="http://www.cyberciti.biz/tips/tag/bootgrubmenulst" rel="tag">/boot/grub/menu.lst</a>, <a
+href="http://www.cyberciti.biz/tips/tag/boot-image" rel="tag">boot image</a>, <a
+href="http://www.cyberciti.biz/tips/tag/bootloader" rel="tag">bootloader</a>, <a
+href="http://www.cyberciti.biz/tips/tag/bsd" rel="tag">bsd</a>, <a
+href="http://www.cyberciti.biz/tips/tag/centos" rel="tag">CentOS</a>, <a
+href="http://www.cyberciti.biz/tips/tag/configuration-file" rel="tag">configuration file</a>, <a
+href="http://www.cyberciti.biz/tips/tag/fedora" rel="tag">fedora</a>, <a
+href="http://www.cyberciti.biz/tips/tag/freebsd" rel="tag">FreeBSD</a>, <a
+href="http://www.cyberciti.biz/tips/tag/freebsd-70" rel="tag">freebsd 7.0</a>, <a
+href="http://www.cyberciti.biz/tips/tag/gedit" rel="tag">gedit</a>, <a
+href="http://www.cyberciti.biz/tips/tag/grub-boot-loader" rel="tag">grub boot loader</a>, <a
+href="http://www.cyberciti.biz/tips/tag/hard-disk" rel="tag">hard disk</a>, <a
+href="http://www.cyberciti.biz/tips/tag/kernel" rel="tag">kernel</a>, <a
+href="http://www.cyberciti.biz/tips/tag/linux" rel="tag">Linux</a>, <a
+href="http://www.cyberciti.biz/tips/tag/linux-grub" rel="tag">linux grub</a>, <a
+href="http://www.cyberciti.biz/tips/tag/partition-size" rel="tag">partition size</a>, <a
+href="http://www.cyberciti.biz/tips/tag/reboot" rel="tag">reboot</a>, <a
+href="http://www.cyberciti.biz/tips/tag/red-hat" rel="tag">red hat</a>, <a
+href="http://www.cyberciti.biz/tips/tag/root-device" rel="tag">root device</a>, <a
+href="http://www.cyberciti.biz/tips/tag/root-partition" rel="tag">root partition</a>, <a
+href="http://www.cyberciti.biz/tips/tag/ubuntu" rel="tag">ubuntu</a>, <a
+href="http://www.cyberciti.biz/tips/tag/ubuntu-linux" rel="tag">Ubuntu Linux</a></p><div
+class="prev_next post_nav"><p
+class="previous">Previous post: <a
+href="http://www.cyberciti.biz/tips/penetration-testing-security-password-auditing-for-unixlinux-systems.html" rel="prev">Penetration testing &#8211; security password auditing for UNIX / Linux systems</a></p><p>Next post: <a
+href="http://www.cyberciti.biz/tips/setup-ssh-to-run-on-a-non-standard-port.html" rel="next">Setup SSH to run on a non-standard port</a></p></div></div><div
+id="sidebars"><div
+id="multimedia_box" class="custom_box"><div
+id="custom_box"><table
+class="cnss-social-icon" style="width:300px;" border="0" cellspacing="0" cellpadding="0"><tr><td
+style="width:36px"><a
+target="_blank" title="Follow us at Twitter" href="https://twitter.com/nixcraft"><img
+src="http://s0.cyberciti.org/images/social/twitter.png" border="0" width="32" height="32" alt="twitter" /></a></td><td
+style="width:36px"><a
+target="_blank" title="Join us at Youtube for Video Tutorials" href="https://youtube.com/user/nixcraftcom"><img
+src="http://s0.cyberciti.org/images/social/youtube.png" border="0" width="32" height="32" alt="youtube" /></a></td><td
+style="width:36px"><a
+target="_blank" title="Follow us on Google Plus" href="https://plus.google.com/+nixCraftadmin?prsrc=5"><img
+src="http://s0.cyberciti.org/images/social/googleplus.png" border="0" width="32" height="32" alt="googleplus" /></a></td><td
+style="width:36px"><a
+target="_blank" title="Facebook fan page" href="https://facebook.com/nixcraft"><img
+src="http://s0.cyberciti.org/images/social/facebook.png" border="0" width="32" height="32" alt="facebook" /></a></td><td
+style="width:36px"><a
+target="_blank" title="Stay updated with our Rss/Feed" href="http://feeds.cyberciti.biz/Nixcraft-LinuxFreebsdSolarisTipsTricks"><img
+src="http://s0.cyberciti.org/images/social/rss.png" border="0" width="32" height="32" alt="rss" /></a></td><td
+style="width:36px"><a
+target="_blank" title="Sign up for our newsletter" href="http://feedburner.google.com/fb/a/mailverify?uri=Nixcraft-LinuxFreebsdSolarisTipsTricks"><img
+src="http://s0.cyberciti.org/images/social/email.png" border="0" width="32" height="32" alt="email" /></a></td></tr></table></div></div><div
+id="sidebar_1" class="sidebar"><ul
+class="sidebar_list"><li
+class="widget widget_text" id="text-15"><div
+class="textwidget"><ins
+class="adsbygoogle"
+style="display:inline-block;width:300px;height:250px"
+data-ad-client="ca-pub-7825705102693166"
+data-ad-slot="7895531150"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></li><li
+class="widget thesis_widget_search" id="thesis-search-widget-5"><form
+method="get" class="search_form" action="http://www.cyberciti.biz/tips/"><p> <input
+class="text_input" type="text" value="To search, type and hit enter" name="s" id="s" onfocus="if (this.value == 'To search, type and hit enter') {this.value = '';}" onblur="if (this.value == '') {this.value = 'To search, type and hit enter';}" /> <input
+type="hidden" id="searchsubmit" value="Search" /></p></form></li><li
+class="widget widget_text" id="text-16"><div
+class="textwidget"><div
+class="g-page" data-href="//plus.google.com/104257421720370350735" data-layout="landscape" data-rel="publisher"></div>  <script type="text/javascript">(function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();</script></div></li><li
+class="widget widget_text" id="text-17"><div
+class="textwidget"><a
+class="twitter-timeline" width="300" height="600" href="https://twitter.com/nixcraft"  data-widget-id="433095977885384704">Tweets by @nixcraft</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div></li><li
+class="widget widget_wp_related_posts" id="wp_related_posts_widget"><div
+class="wp_rp_wrap  wp_rp_modern" id="wp_rp_first"><div
+class="wp_rp_content"><h3>Related Posts</h3><ul
+class="related_post wp_rp" style="visibility: visible"><li ><a
+href="http://www.cyberciti.biz/tips/howto-linux-boot-2tb-larger-raidarray-harddisk.html" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/images/rp/2/1.jpg" alt="Linux: Boot a 2TB+ partition or Larger Array Using Grub" /></a><a
+href="http://www.cyberciti.biz/tips/howto-linux-boot-2tb-larger-raidarray-harddisk.html" class="wp_rp_title">Linux: Boot a 2TB+ partition or Larger Array Using Grub</a></li><li ><a
+href="http://www.cyberciti.biz/tips/impact-of-debian-openssl-vulnerability.html" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/images/rp/2/5.jpg" alt="Impact of the Debian OpenSSL Vulnerability On other Linux Distribution " /></a><a
+href="http://www.cyberciti.biz/tips/impact-of-debian-openssl-vulnerability.html" class="wp_rp_title">Impact of the Debian OpenSSL Vulnerability On other Linux Distribution </a></li><li ><a
+href="http://www.cyberciti.biz/tips/redhat-project-spacewalk.html" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/images/rp/2/15.jpg" alt="Project Spacewalk: Red Hat Open Sourced RHN Software" /></a><a
+href="http://www.cyberciti.biz/tips/redhat-project-spacewalk.html" class="wp_rp_title">Project Spacewalk: Red Hat Open Sourced RHN Software</a></li><li ><a
+href="http://www.cyberciti.biz/tips/display-chinese-japanese-korean-text-on-linux-console.html" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/images/rp/2/22.jpg" alt="Linux: Display Japanese or Chinese Or Any Other Multilingual Text On The Console / Shell Prompt" /></a><a
+href="http://www.cyberciti.biz/tips/display-chinese-japanese-korean-text-on-linux-console.html" class="wp_rp_title">Linux: Display Japanese or Chinese Or Any Other Multilingual Text On The Console / Shell Prompt</a></li><li ><a
+href="http://www.cyberciti.biz/tips/sending-mail-with-attachment.html" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/images/rp/2/28.jpg" alt="Sending Email With Attachments From Unix / Linux Command  [ Shell Prompt ]" /></a><a
+href="http://www.cyberciti.biz/tips/sending-mail-with-attachment.html" class="wp_rp_title">Sending Email With Attachments From Unix / Linux Command  [ Shell Prompt ]</a></li><li ><a
+href="http://www.cyberciti.biz/tips/re-read-the-partition-table-without-rebooting-linux-system.html" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/images/rp/2/12.jpg" alt="Re-read The Partition Table Without Rebooting Linux System" /></a><a
+href="http://www.cyberciti.biz/tips/re-read-the-partition-table-without-rebooting-linux-system.html" class="wp_rp_title">Re-read The Partition Table Without Rebooting Linux System</a></li><li ><a
+href="http://www.cyberciti.biz/tips/redhat-skips-linux-desktop-system.html" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/images/rp/2/8.jpg" alt="Red Hat Skips Linux Desktop &#8211; As It Is Not A Money Maker" /></a><a
+href="http://www.cyberciti.biz/tips/redhat-skips-linux-desktop-system.html" class="wp_rp_title">Red Hat Skips Linux Desktop &#8211; As It Is Not A Money Maker</a></li><li ><a
+href="http://www.cyberciti.biz/tips/unix-linux-bsd-pydf-command-in-colours.html" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/images/rp/2/23.jpg" alt="Unix / Linux: See Colourised Filesystem Disk Space Usage" /></a><a
+href="http://www.cyberciti.biz/tips/unix-linux-bsd-pydf-command-in-colours.html" class="wp_rp_title">Unix / Linux: See Colourised Filesystem Disk Space Usage</a></li><li ><a
+href="http://www.cyberciti.biz/tips/gcc-linux-bsd-kernel-bug.html" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/images/rp/2/27.jpg" alt="GCC Compiler  4.3.0 exposes a Linux / BSD kernel bug" /></a><a
+href="http://www.cyberciti.biz/tips/gcc-linux-bsd-kernel-bug.html" class="wp_rp_title">GCC Compiler  4.3.0 exposes a Linux / BSD kernel bug</a></li><li ><a
+href="http://www.cyberciti.biz/tips/linux-success-story-using-linux-at-work.html" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/images/rp/2/12.jpg" alt="Linux success story &#8211; Using Linux at Work" /></a><a
+href="http://www.cyberciti.biz/tips/linux-success-story-using-linux-at-work.html" class="wp_rp_title">Linux success story &#8211; Using Linux at Work</a></li></ul></div></div></li><li
+class="widget widget_text" id="text-18"><div
+class="textwidget"><iframe
+src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fnixcraft&amp;width=300&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:258px;" allowTransparency="true"></iframe></div></li><li
+class="widget widget_rss" id="rss-3"><h3><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/feed/' title='Syndicate this content'><img
+style='border:0' width='14' height='14' src='http://www.cyberciti.biz/tips/wp-includes/images/rss.png' alt='RSS' /></a> <a
+class='rsswidget' href='http://www.cyberciti.biz/faq' title='Every answer asks a more beautiful question.'>Latest Linux/Unix Q &amp; A</a></h3><ul><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/how-to-set-up-ssh-keys-on-linux-unix/' title='I recently read that SSH keys provide a secure way of logging into a Linux and Unix-based server. How do I set up SSH keys on a Linux or Unix based systems? In SSH for Linux/Unix, how do I set up public key authentication?Read answer to: &quot;HowTo: Setup SSH Keys on a Linux / Unix System&quot;    '>HowTo: Setup SSH Keys on a Linux / Unix System</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/unix-linux-chroot-command-examples-usage-syntax/' title='I am a new Linux and Unix user. How do I change the root directory of a command? How do I change the root directory of a process such as web-server using a chroot command to isolate file system? How do I use a chroot to recover password or fix the damaged Linux/Unix based environment?Read answer to: &quot;Linux / Unix: chroot Command Examples&quot;    '>Linux / Unix: chroot Command Examples</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/linux-unix-minify-compress-css-javascript-files-shell-prompt/' title='How do I minify and compress CSS &amp; JS files on Linux or Unix-like system using shell prompt on my server? How can I minify JavaScripts and stylesheets at shell promot so they can download faster over the Internet without using any online tools?Read answer to: &quot;Minify and Compress CSS &amp; Javascript Files At a Linux/Unix Shell Prompt&quot;    '>Minify and Compress CSS &amp; Javascript Files At a Linux/Unix Shell Prompt</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/centos-install-lighttpd-web-server-with-yum-command/' title='I know how to install nginx on a CentOS Linux using yum command. Is there is a guide to install Lighttpd web-server on a CentOS Linux or RHEL server with yum command? How can I install and configure php and mysql on a CentOS with Lighttpd web-server?Read answer to: &quot;CentOS Install Lighttpd Web-server With yum Command&quot;    '>CentOS Install Lighttpd Web-server With yum Command</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/centos-linux-6-install-java-sdk/' title='How do I install JDK runtime environment on a CentOS Linux version 6.x using yum command?Read answer to: &quot;CentOS Install Java SDK using yum Command&quot;    '>CentOS Install Java SDK using yum Command</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/centos-rpmdb-panic-fatal-region-error-detected-run-recovery-error-and-solution/' title='I am using a CentOS Linux v6.5 on my home server and I am getting the following error when I execute yum command:rpmdb: PANIC: fatal region error detected; run recovery error: db3 error(-30974) from dbenv-&gt;open: DB_RUNRECOVERY: Fatal error, run database recovery error: cannot open Packages index using db3 -  (-30974) error: cannot open Packages database in /var/lib/rpm CRITICAL:yum.main: Error: rpmdb open failed How do I fix this problem on a CentOS / RHEL based system?Read answer to: &quot;CentOS: rpmdb: PANIC: fatal region error detected; run recovery error and solution&quot;    '>CentOS: rpmdb: PANIC: fatal region error detected; run recovery error and solution</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/howto-update-gcutil-gcloud-components-on-a-linux-unix-os-x/' title='How can I update for Google Cloud SDK components on a Linux or OS X unix based systems?Read answer to: &quot;HowTo: Update gcutil / gcloud Components On a Linux / Unix / OS X&quot;    '>HowTo: Update gcutil / gcloud Components On a Linux / Unix / OS X</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/curl-command-resume-broken-download/' title='I know wget can resume a failed download. I am on a Mac OS X and do now want to install wget command. How can I resume a failed download using curl command on Linux or Unix-like systems?Read answer to: &quot;curl Command Resume Broken Download&quot;    '>curl Command Resume Broken Download</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/freebsd-checking-quota-limits-and-disk-usage/' title='I&#039;m a new FreeBSD unix user and backup file on a FreeBSD based unix server. How can I check quota limits and disk usage using shell prompt on a FreeBSD based system?Read answer to: &quot;FreeBSD Show Disk Quota Limits Command&quot;    '>FreeBSD Show Disk Quota Limits Command</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/explain-brace-expansion-in-cp-mv-bash-shell-commands/' title='I often see commands as follows posted on blog or forums cp /etc/httpd/httpd.{,.bakup} OR mv resume{z,}.doc What is the purpose of {,} in Linux and Unix shell commands?Read answer to: &quot;Explain: {,} in cp or mv Bash Shell Commands&quot;    '>Explain: {,} in cp or mv Bash Shell Commands</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/ubuntu-copy-file-command/' title='I&#039;m a new Ubuntu Linux user. This seems like a newbie question, but I can not seem to find examples to copy files on Ubuntu. How do I copy file to another directory on Ubuntu Linux using command line terminal application? How can I copy files via terminal on Ubuntu Linux desktop?Read answer to: &quot;Ubuntu Copy File Command&quot;    '>Ubuntu Copy File Command</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/linux-log-suspicious-martian-packets-un-routable-source-addresses/' title='I run a web-server and I would like to log packets with un-routable source addresses on Linux operating system. How can I log spoofed packets on Debian / Ubuntu / CentOS / RHEL / Linux based server? How can I log a Martian packet (packet from Mars) on Linux operating systems?Read answer to: &quot;Linux: Log Suspicious Martian Packets / Un-routable Source Addresses&quot;    '>Linux: Log Suspicious Martian Packets / Un-routable Source Addresses</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/rhel-centos-linux-common-nfs-mount-options-increase-security/' title='I am using NFS server version 4.x on a CentOS/RHEL based system. I&#039;m mounting my shared /var/www/ directory on five Apache based nodes using the following syntax:mount -t nfs4 -o rw,intr,hard,proto=tcp rocknas02:/httproot/www /var/www/ I noticed that due to bug in my app user can sometime upload executable or other device files to get out of chrooted Apache server. How can I prevent such security issues on a CentOS or RHEL based NFS client and sever setup?Read answer to: &quot;Increase NFS Client Mount Point Security For a Web-Server noexec, nosuid, nodev Options&quot;    '>Increase NFS Client Mount Point Security For a Web-Server noexec, nosuid, nodev Options</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/prevent-yum-from-updating-kernel-on-centos-rhel-linux/' title='I am a new RHEL / Centos Linux server admin. I would like yum to update all packages except the Linux Kernel. How can I prevent yum command from updating kernel on a CentOS/RHEL/Fedora Linux based systems?Read answer to: &quot;HowTo: Prevent Yum From Upgrading The Kernel On a CentOS / Red Hat Enterprise Linux&quot;    '>HowTo: Prevent Yum From Upgrading The Kernel On a CentOS / Red Hat Enterprise Linux</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/unix-linux-command-to-check-new-files-in-file-system/' title='Recently, I switched from MS-Windows based web-server to CentOS Linux based Apache web-server. All user uploaded files are stored in /var/www/uploads/ directory. Is there command that can give me a list of files that have been added to the filesystem at /var/www/uploads/ in last 7 days on Linux/Unix-like oses?Read answer to: &quot;Unix / Linux: Check New Files In File System /var/www/uploads/&quot;    '>Unix / Linux: Check New Files In File System /var/www/uploads/</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/unix-linux-check-last-time-user-loggedin-command/' title='I am a new Unix system admin. How do I find ouw who has recently use the Linux or Unix-like server? Which terminals they used, and when they logged in and out of the my server?Read answer to: &quot;Linux / Unix: Check Last Time User Logged In On The System&quot;    '>Linux / Unix: Check Last Time User Logged In On The System</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/centos-redhat-fedora-yum-lock-package-version-command/' title='I am a new CentOS / RHEL 6.x server user and DevOP. I need to lock a package called nginx on a server being updated via yum command. How do I lock package version at a particular version on CentOS / Red Hat Enterprise Linux (RHEL) 6.x or Fedora Linux?Read answer to: &quot;CentOS / RHEL: Yum Lock Package Version At a Particular Version&quot;    '>CentOS / RHEL: Yum Lock Package Version At a Particular Version</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/centos-change-ssh-port/' title='I am a new CentOS Linux user. How do I change default sshd tcp port # 22 to 2022 on CentOS Linux version 5/6?Read answer to: &quot;CentOS Linux 5/6: Change OpenSSH Port Number&quot;    '>CentOS Linux 5/6: Change OpenSSH Port Number</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/unix-linux-whereis-command-examples-to-locate-binary/' title='I am a new Linux and Unix-like system command line user. How do I find and locate the binary, source, and manual page files for a given command?Read answer to: &quot;Linux / Unix: whereis Command Examples&quot;    '>Linux / Unix: whereis Command Examples</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/nginx-redirect-backend-traffic-based-upon-client-ip-address/' title='I have four Apache backend servers in front of nginx reverse proxy server. How do I make sure nginx reverse proxy load balancer always send specific client IP address (say IP 1.2.3.4) request to http://apachereadwrite/ backend and rest to http://apachereadonly/ backend?Read answer to: &quot;Nginx: Redirect Backend Traffic Based Upon Client IP Address&quot;    '>Nginx: Redirect Backend Traffic Based Upon Client IP Address</a></li></ul></li><li
+class="widget widget_text" id="text-19"><h3>Subscribe to nixCraft</h3><div
+class="textwidget"><form
+style="border:1px solid #ccc;padding:3px;text-align:center;" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=Nixcraft-LinuxFreebsdSolarisTipsTricks', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p>Learn something new about Linux/Unix by email<br/>Enter your email address:</p><p><input
+type="text" style="width:140px" name="email"/></p><input
+type="hidden" value="Nixcraft-LinuxFreebsdSolarisTipsTricks" name="uri"/><input
+type="hidden" name="loc" value="en_US"/><input
+type="submit" value="Subscribe" /></form></div></li></ul></div></div></div><div
+id="footer"> &copy;2004-2014 nixCraft. All rights reserved. <a
+href="/tips/privacy">Privacy Policy</a> - <a
+href="/tips/disclaimer">Terms of Service</a> - <a
+href="/tips/contact-us">Questions or Comments</a> -
+We are proudly powered by Linux + Nginx + WordPress.</br> The content is <a
+href="/tips/copyright">copyrighted to nixCraft</a> and may not be reproduced on other websites. <script type='text/javascript' src='http://www.cyberciti.biz/tips/wp-includes/js/comment-reply.min.js?ver=3.8.1'></script>	</div>
+</div>
+</div>
+<!--[if lte IE 8]>
+<div id="ie_clear"></div>
+<![endif]-->
+<script src="http://www.cyberciti.biz/mint/?js" type="text/javascript"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-108650-1']);
+  _gaq.push(['_setDomainName', 'www.cyberciti.biz']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
